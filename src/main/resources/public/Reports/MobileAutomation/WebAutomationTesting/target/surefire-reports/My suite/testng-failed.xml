@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [My suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Test1(failed)" verbose="0">
+    <classes>
+      <class name="com.tests.ENGRCMobilewithArgs">
+        <methods>
+          <include name="EnGRC"/>
+          <include name="ENGRCUserNavigation"/>
+        </methods>
+      </class> <!-- com.tests.ENGRCMobilewithArgs -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [My suite] -->

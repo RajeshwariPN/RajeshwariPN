@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>FLIXIB</title>
+      <script src="js/jquery3.6.0.min.js"></script>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/navbar.css">
+      <link rel="stylesheet" href="css/sidebar.css">
+      <link rel="stylesheet" href="css/performance.css">
+      <link rel="stylesheet" href="css/style.css">
+    
+   </head>
+   <body>
+      <!--top nav starts-->
+      <div class="navbarFixed">
+         <div class="grid-icon"> <img src="images/grid.svg"> </div>
+         <div class="logo-container"> <img src="images/Flexib-icon.svg"> </div>
+         <div class="right-allign">
+            <div class="searchbar-section">
+               <div class="inputareain">
+                  <input type="text" class="form-control" placeholder="Search"> <img src="images/dashboard/Search.svg" class="search"> 
+               </div>
+            </div>
+            <div class="bell-icon">
+               <div class="bell">
+                  <img src="images/bell.svg">
+                  <div class="nottification"></div>
+               </div>
+            </div>
+            <div class="dropdown-profile">
+               <div class="user-profile-main">
+                  <div class="userdata">
+                     <h4>Manager</h4>
+                     <p>Last Login 01/01/2021</p>
+                  </div>
+                  <div class="user-image"><img src="images/user.png"></div>
+                  <div class="user-profile-details">
+                     <div class="full-width close-click">
+                        <div class="user-details">
+                           <div class="userdata">
+                              <h4>Rajesh Krishnan</h4>
+                              <p class="position-in">Admin</p>
+                           </div>
+                           <div class="user-image"><img src="images/user.png"></div>
+                        </div>
+                     </div>
+                     <div class="full-width user-details-list">
+                        <ul>
+                           <li>
+                              <a> <img src="images/user-icon.svg"> <span>My Profile</span> </a>
+                           </li>
+                           <li>
+                              <a> <img src="images/settings.svg"> <span>Settings</span> </a>
+                           </li>
+                           <!--
+                              <li>
+                                 <a>
+                                     <img src="images/user-icon.svg"> <span>Theme</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a>
+                                     <img src="images/users.svg"> <span>Entity Change</span>
+                                 </a>
+                              </li>
+                              -->
+                           <li>
+                              <a> <img src="images/log-in.svg"> <span>Logout</span> </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--top nav endss-->
+      <!--side menu starts-->
+      <div class="side-menubar">
+         <ul>
+            <li>
+               <a><img src="images/dashboard/Dashboard.svg" class="menu-icon"></a>
+               <div class="hover-menu"> <a href="dashboard.html">Dashboard</a> </div>
+            </li>
+            <li>
+               <a><img src="images/dashboard/Automation.svg" class="menu-icon"></a>
+               <div class="hover-menu"> <a href="Automation.html">Digital Automation</a> <a href="Performance.html">Perfomance</a> <a href="security.html">Security</a> <a href="QAOPS.html">QA Ops</a> </div>
+            </li>
+            <li>
+               <a><img src="images/dashboard/Create-new-projecy.svg" class="menu-icon"></a>
+               <div class="hover-menu"> <a href="#">Create New Project</a> </div>
+            </li>
+            <li>
+               <a><img src="images/dashboard/Reports.svg" class="menu-icon"></a>
+               <div class="hover-menu"> <a href="Reports.html">Reports</a> </div>
+            </li>
+            <li>
+               <a><img src="images/dashboard/Monitoring.svg" class="menu-icon width"></a>
+               <div class="hover-menu"> <a href="#">Monitoring</a> </div>
+            </li>
+            <li>
+               <a><img src="images/dashboard/Continiuos-testing.svg" class="menu-icon"></a>
+               <div class="hover-menu"> <a href="Testing.html">Continiuos Testing</a> </div>
+            </li>
+            <li>
+               <a><img src="images/dashboard/Defect-Tracker.svg" class="menu-icon"></a>
+               <div class="hover-menu"> <a href="#">Defect Tracker</a> </div>
+            </li>
+         </ul>
+      </div>
+      <!--side menu endss-->
+      <!--main container starts-->
+      <div class="main-container-section">
+         <div class="container-fluid">
+            <section id="automation-header">
+               <div class="container">
+                  <div class="full-width common-padd-left">
+                     <h6>Performance</h6>
+                  </div>
+                  <div class="full-width automation-path relative common-padd-left">
+                     <img src="images/web-automation/arrow-left-circle.svg" class="left-arrow">
+                     <p>Home > Performance > <span id="page">Digital  </span></p>
+                     <select class=" project-name" name="project" id="head_project">
+                       
+                     </select>
+                  </div>
+               </div>
+            </section>
+            <section id="tabs">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12 ">
+                        <nav>
+                           <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                               <a class="nav-item nav-link active" id="Digital" data-toggle="tab" href="#nav-digital" role="tab" aria-controls="nav-digital" aria-selected="true">Digital
+                                 <span class="titletip"><img src="images/web-automation/help-circle.svg"> <span class="texttop">Performance Testing of Web, Mobile & API's with workload modelling</span></span></a>
+                               <a class="nav-item nav-link" id="ISO" data-toggle="tab" href="#nav-iso" role="tab" aria-controls="nav-iso" aria-selected="false">Payment System
+                                 <span class="titletip"><img src="images/web-automation/help-circle.svg"> <span class="texttop">Compare visual differences between UI Screens in various environments</span></span>
+                               </a> 
+                              </div>
+                              <div class="upload titletip"><img src="images/web-automation/Upload.svg"><span class="textleft">File Upload</span></div>
+                             <a th:href = @{/perfdownload}><div class="download titletip"><img src="images/web-automation/Download.svg"><span class="textleft">Download Template</span></div></a>
+   
+                           <hr>
+                        </nav>
+                        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                           <div class="row project-form">
+                              <div class="check-alert-top">
+                                 <div class="row">
+                                    <div class="col-md-9">
+                                       <p>Project Upload to Repository</p>
+                                    </div>
+                                    <div class="col-md-3"> <img src="images/web-automation/x-circle.svg" id="upload-form-hide"> </div>
+                                 </div>
+                              </div>
+                              <div class="row upload-form-details">
+                                 
+                                 <form action="">
+                                    
+                                    <label for="repo">Repository</label>
+                                    <br>
+                                    <select class="form-control" name="reposi" id="reposi">
+                                       <option value="git">GIT HUb</option>
+                                       <option value="svn">SVN</option>
+                                    </select>
+                                    <label for="up-project">Project</label>
+                                    <br>
+                                    <select class="form-control" name="uplod-name" id="uplod-name">
+                                       <option value="ABC">Project 1</option>
+                                       <option value="XYZ">Project 2</option>
+                                       <option value="PQR">Project 3</option>
+                                       <option value="BCD">Project 4</option>
+                                    </select>
+                                   
+                                    <label for="cate">Category</label>
+                                    <br>
+                                    <select class="form-control" name="project-name" id="project-name">
+                                       <option value="web">Web Application</option>
+                                       <option value="perfomance">Perfomance</option>
+                                       <option value="security">Security</option>
+                                       <option value="api">API Testing</option>
+                                    </select>
+                                    <div class="col-md-12 search-container">
+                                       <p>Project Directory</p>
+                                       <input type="text" placeholder="Search.." class="search-class" name="search2">
+                                       <button type="submit"><img src="images/dashboard/Search.svg"></button>
+                                       <br/> 
+                                    </div>
+                                    <br/>
+                                    <button type="submit" class="btn btn-primary perfor_upload" value="Submit">Upload to Repo</button>
+                                    <br/> 
+                                 </form>
+                              </div>
+                           </div>
+                         
+                           <!--   Code Analysis Start -->
+                           <div class="tab-pane fade show active performance_code" id="nav-digital" role="tabpanel" aria-labelledby="digital">
+                              <h5>Execution</h5>
+                              <div class="row">
+                                <div class="col-md-4">
+                                   <p>Server URL</p>
+                                   <input type="text" placeholder="Type" class="form-control" id="perfor-digital-url">                                 
+                                </div>
+                                <div class="col-md-4">
+                                    <p>Server Port</p>
+                                    <input type="text" placeholder="Type" class="form-control" id="perfor-digital-port">
+                                </div>
+                                <div class="col-md-4">
+                                    <p>User Count</p>
+                                    <input type="text" placeholder="Type" class="form-control" id="perfor-digital-count">
+                                </div>
+                             </div>
+                             <div class="row">
+                                <div class="col-md-4">
+                                   <p>Duration (Sec)</p>
+                                   <input type="text" placeholder="Type" class="form-control" id="perfor-digital-duration">                        
+                                </div>
+                                <div class="col-md-4">
+                                    <p>Ramp Up</p>
+                                    <input type="text" placeholder="Type" class="form-control" id="perfor-digital-rampup">
+                                </div>
+                                <div class="col-md-4">
+                                    <p>Ramp Down</p>
+                                    <input type="text" placeholder="Type" class="form-control" id="perfor-digital-rampdown">
+                                </div>
+                             </div>
+                            </br>
+                             <div class="row perfor-digital-report">
+                                <div class="col-md-6">
+                                <a href="#perforlog">   <button type="button" class="btn btn-primary " value="Execute" id="perfor_digital_Execute"> Execute</button> </a>                                   </div>
+                                <div class="col-md-6">
+                                   <button type="button" class="btn btn-default" value="Report" id="perfor_digital_Report"> Report</button>
+                                </div>
+                             </div>
+                             <div class="row" id="perforlog">
+                                <div class="col-md-12">
+                                   <div class="progress-console perfor_digital_log">
+                                      <div class="progress-log">
+                                         <p>Progress</p>
+                                      </div>
+                                      <div class="col-md-12 progress-text"> <span>28.07.2021 12:30:12</span> <span class="black">Execution started</span>
+                                <br/> <span>28.07.2021 12:30:12</span> <span class="black"> Process 1 started on thread 1</span>
+                                <br/> <span>28.07.2021 12:30:12</span> <span class="green">Process 1 completed on thread 1</span>
+                                <br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 2 started on thread 1</span>
+                                <br/> <span>28.07.2021 12:30:12</span> <span class="red">Process 2 failed on thread 1</span>
+                                <br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 3 started on thread 1</span>
+                                <br/> <span>28.07.2021 12:30:12</span> <span class="green">Process 3 completed on thread 1</span>
+                                <br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 4 started on thread 1</span> 
+                            </div>
+                                </div>
+                             </div>
+                          </div>
+                             
+                           </div>
+                           <!-- Code Quality start-->
+                           <div class="tab-pane performance_code" id="nav-iso" role="tabpanel" aria-labelledby="iso">
+                             <div class="performance-table">
+                                <table id="perform-iso" class="display" style="width:100%">
+                                   <thead>
+                                      <tr>
+                                         <th>Remitter <img src="images/sort.png" alt=""></th>
+                                         <th>Remitter <img src="images/sort.png" alt=""></th>
+                                         <th>Port <img src="images/sort.png" alt=""></th>
+                                         <th>Benificiary <img src="images/sort.png" alt=""></th>
+                                         <th>Send Rate <img src="images/sort.png" alt=""></th>
+                                         <th>Template <img src="images/sort.png" alt=""></th>
+                                         <th>Iterations <img src="images/sort.png" alt=""></th>
+                                         <th>Rampuptime <img src="images/sort.png" alt=""></th>
+                                         <th></th>
+                                      </tr>
+                                   </thead>
+                                   <tbody>
+                                      <tr>
+                                        <td>
+                                            <select class="project-method form-control" name="method">
+                                               <option value="GET">Remitter</option>
+                                               <option value="POST">Remitter 1</option>
+                                            </select>
+                                         </td>
+                                         <td>
+                                            <input type="text" class="form-control" placeholder="Type"> </td>
+                                         <td>
+                                            <input type="text" class="form-control" placeholder="Type">
+                                         </td>
+                                         <td>
+                                            <input type="text" class="form-control" placeholder="Type">
+                                         </td>
+                                         <td>
+                                            <input type="text" class="form-control" placeholder="Type">
+                                         </td>
+                                         <td>
+                                            <select class=" project-method form-control" name="method">
+                                               <option value="GET">Template</option>
+                                               <option value="POST">Template 1</option>
+                                               <option value="PUT">Template 2</option>
+                                            </select>
+                                         </td>
+                                         <td>
+                                            <input type="text" class="form-control" placeholder="Type" id="req_input">
+                                         </td>
+                                         <td>
+                                            <input type="text" class="form-control" placeholder="Type">
+                                         </td>
+                                         <td class="Add-trash"> <span> <img src="images/web-automation/plus-circle.svg" class="add"> </span> <!-- &nbsp; <span><img src="images/web-automation/trash-2.svg" class="delete"></span> --> </td>
+                                      </tr>
+                                   </tbody>
+                                </table>
+                                   </div>
+                                </br>
+                                <div class="row perfor-digital-report">
+                                   <div class="col-md-6">
+                                   <a href="#isolog">   <button type="button" class="btn btn-primary " value="Execute" id="perfor_iso_Execute"> Execute</button> </a>  
+                                   </div>
+                                   <div class="col-md-6">
+                                      <button type="button" class="btn btn-default" value="Report" id="perfor_iso_Report"> Report</button>
+                                   </div>
+                                </div>
+                                <div class="row" id="isolog">
+                                   <div class="col-md-12">
+                                      <div class="progress-console perfor_iso_log">
+                                         <div class="progress-log">
+                                            <p>Progress</p>
+                                         </div>
+                                         <div class="col-md-12 progress-text"> <span>28.07.2021 12:30:12</span> <span class="black">Execution started</span>
+                                   <br/> <span>28.07.2021 12:30:12</span> <span class="black"> Process 1 started on thread 1</span>
+                                   <br/> <span>28.07.2021 12:30:12</span> <span class="green">Process 1 completed on thread 1</span>
+                                   <br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 2 started on thread 1</span>
+                                   <br/> <span>28.07.2021 12:30:12</span> <span class="red">Process 2 failed on thread 1</span>
+                                   <br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 3 started on thread 1</span>
+                                   <br/> <span>28.07.2021 12:30:12</span> <span class="green">Process 3 completed on thread 1</span>
+                                   <br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 4 started on thread 1</span> 
+                               </div>
+                                   </div>
+                                </div>
+                             </div>
+
+                                </div>
+                             </div>       
+                           </div>
+                        
+                         
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+      </div>
+	<!--main container endss-->
+	<!--    copy rights starts-->
+	<div class="copyright-container"> Copyright © 3i Infotech. All rights reserved. </div>
+	<!--    copy rights ends-->
+	<script src="js/jquery3.6.0.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/jquery.dataTables.min.js"></script>
+	<script src="js/Chart.js"></script>
+	<script>
+	$(".user-profile-main").click(function() {
+		$(".user-profile-details").addClass("show-div");
+		event.stopPropagation();
+	});
+	$(".close-click").click(function() {
+		$(".user-profile-details").removeClass("show-div");
+		event.stopPropagation();
+	});
+	$('body').click(function() {
+		$('.user-profile-details').removeClass("show-div");
+	});
+	</script>
+	<script>
+	$(".nav-item").click(function() {
+
+		document.getElementById("page").innerHTML = this.id;
+      if(this.id == "ISO"){
+         $(".download img").css("display", "none");
+         document.getElementById("page").innerHTML = "Payment System";
+      }else{
+         $(".download img").css("display", "block");
+      }
+	});
+
+    $("#perfor_digital_Execute").click(function() {
+		$(".perfor_digital_log").css("display", "block");
+	});
+    $("#perfor_iso_Execute").click(function() {
+		$(".perfor_iso_log").css("display", "block");
+	});
+
+   	// upload project
+	$(".upload").click(function() {
+		$(".project-form").css("display", "block");
+	});
+   $("#upload-form-hide").click(function() {
+		$(".project-form").css("display", "none");
+	});
+	</script>
+
+
+	<script>     
+  // project list   
+     project_Function();
+     function project_Function() {
+      $.ajax({
+       type: "GET",
+      url: "https://api.github.com/orgs/vamsiui/projects",
+          headers:{
+              Accept: "application/vnd.github.inertia-preview+json",
+          },
+       success: function(data) {
+           console.log(data);
+     for (var i = 0; i < data.length; i++) {
+         var select = document.getElementById("head_project");
+         var option = document.createElement("option");
+         option.text = data[i].name;
+         option.value = data[i].id;
+         select.add(option);
+                }	
+       },
+       error: function(data, textStatus, jqXHR) {
+        console.log(data);
+       }
+      });
+     };
+     </script>
+     <script>
+    	$(document).ready(function() {
+		$('#perform-iso').DataTable();
+	     });
+var j= 0;
+        $(document).on("click", ".delete", function(){
+           j = j-1;
+         //  alert("Are you sure do you want to delete this record ?");
+           var r = confirm("Are you sure do you want to delete this record ?");
+               if (r == true) {
+                  $(this).parents("tr").remove();
+               } 
+               if(j == 0){
+                  $(".add").css("visibility", "visible");
+               }
+	  //	$(".add-new").removeAttr("disabled");
+    });
+    $(document).on("click", ".add", function(){
+     j = j+1;
+    $(this).parents("tr").add();
+    $(".add").css("visibility", "hidden");
+    $("#perform-iso").find('tbody').append("<tr class='added_row'><td><select class='project-method form-control' name='method'>  <option>Remitter</option>  <option>Remitter 1</option></select></td><td><input type='text' class='form-control' placeholder='type'></td><td><input type='text' class='form-control' placeholder='type'></td><td><input type='text' class='form-control' placeholder='type'></td><td><input type='text' class='form-control' placeholder='type'></td><td><select class='project-method form-control' name='method'> <option>Template</option><option>Template 1</option></select></td><td><input type='text' class='form-control' placeholder='type'></td><td><input type='text' class='form-control' placeholder='type'></td>     <td class='Add-trash'> <span> <img src='images/web-automation/plus-circle.svg' class='add'> </span>&nbsp; <span><img src='images/web-automation/trash-2.svg' class='delete'></span> </td></tr>");
+
+
+     });
+     </script>
+  
+
+ 
+
+</body>
+
+</html>

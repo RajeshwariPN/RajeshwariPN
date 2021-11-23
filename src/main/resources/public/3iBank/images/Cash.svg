@@ -1,0 +1,7 @@
+<svg id="Cash" xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15">
+  <g id="cash-stack" transform="translate(0 -4.5)">
+    <path id="Path_4419" data-name="Path 4419" d="M18.5,5.75H2.25A1.25,1.25,0,0,1,3.5,4.5h15a1.25,1.25,0,0,1,1.25,1.25Z" transform="translate(-1)" fill="#fff"/>
+    <path id="Path_4420" data-name="Path 4420" d="M18.75,10.25H1.25v10h17.5ZM1.25,9A1.25,1.25,0,0,0,0,10.25v10A1.25,1.25,0,0,0,1.25,21.5h17.5A1.25,1.25,0,0,0,20,20.25v-10A1.25,1.25,0,0,0,18.75,9Z" transform="translate(0 -2)" fill="#fff" fill-rule="evenodd"/>
+    <path id="Path_4421" data-name="Path 4421" d="M17.25,11.25a2.5,2.5,0,0,0,2.5,2.5v-2.5Zm-12.5,0a2.5,2.5,0,0,1-2.5,2.5v-2.5Zm12.5,10a2.5,2.5,0,0,1,2.5-2.5v2.5Zm-12.5,0a2.5,2.5,0,0,0-2.5-2.5v2.5Zm8.75-5a2.5,2.5,0,1,1-2.5-2.5A2.5,2.5,0,0,1,13.5,16.25Z" transform="translate(-1 -3)" fill="#fff"/>
+  </g>
+</svg>

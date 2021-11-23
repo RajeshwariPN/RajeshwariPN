@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>3iBank</title>
+      <script src="js/jquery3.6.0.min.js"></script>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/main.css"> 
+      <link rel="stylesheet" href="css/navbar.css">
+      <link rel="stylesheet" href="css/sidebar.css">
+      <link rel="stylesheet" href="css/security.css">
+      <link rel="stylesheet" href="css/style.css">
+    
+   </head>
+   <body>
+      <!--top nav starts-->
+      <div class="navbarFixed">
+         <div class="logo-container"><h2 class="green">3i Bank</h2> </div>
+         <div class="right-allign">
+            <div class="searchbar-section">
+               <div class="inputareain">
+                  <input type="text" class="form-control" placeholder="Search"> <img src="images/Search.svg" class="search"> 
+               </div>
+            </div>
+            <div class="bell-icon">
+               <div class="bell">
+                  <img src="images/bell.svg">
+                  <div class="nottification"></div>
+               </div>
+            </div>
+            <div class="dropdown-profile">
+               <div class="user-profile-main">
+                  <div class="userdata">
+                     <h4 id="profilename"></h4>
+                     <p id="lastlogin"></p>
+                  </div>
+                  <div class="user-image"><img src="images/user.png" id="profileimg"></div>
+                  <div class="user-profile-details">
+                     <div class="full-width close-click">
+                        <div class="user-details">
+                           <div class="userdata">
+                              <h4 id="adminprofile">Rajesh Krishnan</h4>
+                              <p class="position-in">Admin</p>
+                           </div>
+                           <div class="user-image"><img src="images/user.png" id="profileimg2"></div>
+                        </div>
+                     </div>
+                     <div class="full-width user-details-list">
+                        <ul>
+                           <li>
+                              <a> <img src="images/user-icon.svg"> <span>My Profile</span> </a>
+                           </li>
+                           <li>
+                              <a> <img src="images/settings.svg"> <span>Settings</span> </a>
+                           </li>
+                           <li>
+                              <a> <img src="images/log-in.svg"> <span>Logout</span> </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--top nav endss-->
+         <!--side menu starts-->
+         <div class="side-menubar">
+            <ul>
+               <li>
+                  <a><img src="images/home.svg" class="menu-icon"></a>
+                  <div class="hover-menu"> <a href="home.html">Home</a> </div>
+               </li>
+             
+               <li>
+                  <a><img src="images/Cards.svg" class="menu-icon"></a>
+                  <div class="hover-menu"> <a href="#">Cards</a> </div>
+               </li>
+               <li>
+                  <a><img src="images/Cash.svg" class="menu-icon"></a>
+                  <div class="hover-menu"> <a href="Reports.html">Accounts</a> </div>
+               </li>
+             <li>
+                  <a><img src="images/Loan.svg" class="menu-icon"></a>
+                  <div class="hover-menu"> <a href="Testing.html">Loan</a> </div>
+               </li>
+               <li>
+                  <a><img src="images/Offer.svg" class="menu-icon"></a>
+                  <div class="hover-menu"> <a href="Defect-tacker.html">Offer</a> </div>
+               </li>
+            </ul>
+         </div>
+         <!--side menu endss-->
+      <!--main container starts-->
+      <div class="main-container-section">
+         <div class="container-fluid">
+            <section id="automation-header">
+               <div class="container">
+                  <div class="full-width common-padd-left">
+                     <h6>Customer Form</h6>
+                     <hr style="border:1px solid #ccc;">
+                  </div>
+                  <div class="full-width automation-path relative common-padd-left">
+                 
+                  </div>
+               </div>
+            </section>
+            <section id="tabs">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12 ">
+                        <nav>
+                           <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                               <a class="nav-item nav-link active" id="personaldetails" data-toggle="tab" href="#nav-step1" role="tab" aria-controls="nav-step1" aria-selected="true"><h6>STEP 1</h6>Personal Details</a>
+                               <a class="nav-item nav-link" id="employeedetails" data-toggle="tab" href="#nav-step2" role="tab" aria-controls="nav-step2" aria-selected="false"><h6>STEP 2</h6>Employment Details</a>
+                               <!-- <a class="nav-item nav-link" id="Digital Security" data-toggle="tab" href="#nav-digital" role="tab" aria-controls="nav-mobile" aria-selected="false">Digital Security</a>  -->
+                              </div>
+                           <hr>
+                        </nav>
+                        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                       
+
+                           <!--   Code Analysis Start -->
+                           <div class="tab-pane fade show active pers_data" id="nav-step1" role="tabpanel" aria-labelledby="step1">
+                     
+                              <div class="row">
+                                <div class="col-md-4">
+                                   <p> First Name</p>
+                                   <input type="text" placeholder="Type" class="form-control" id="firstname">
+                                  
+                                </div>
+
+                                <div class="col-md-4">
+                                 <p> Last Name</p>
+                                 <input type="text" placeholder="Type" class="form-control" id="lastname">
+                                
+                                </div>
+                                <div class="col-md-4">
+                                    <p>Gender</p>
+                                    <input type="radio" name="gender"> Male &nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="gender"> Female
+                                    <!-- <select class="form-control" id="code-source">
+                                       <option value="Localstorage"> Local Storage</option>
+                                       <option value="SVN">SVN</option>
+                                    </select> -->
+                                </div>
+                             </div>
+                              <div class="row">
+                                <div class="col-md-4">
+                                   <p>Date Of Birth</p>
+                                   <input type="date" placeholder="Type" class="form-control"  id="dob">
+                                  
+                                </div>
+
+                                <div class="col-md-4">
+                                    <p>PAN Number </p>
+                                    <input type="text" placeholder="Type" class="form-control" id="pancard">
+
+                                </div>
+                                <div class="col-md-4">
+                                    <p>Mobile Number</p>
+                                    <input type="text" placeholder="Type" class="form-control" id="mobileno">
+
+                                </div>
+                             </div>
+                             <div class="row">
+                                <div class="col-md-4">
+                                   <p>Email</p>
+                                   <input type="email" placeholder="Type" class="form-control"  id="email">
+                                  
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9">
+                                 <button type="button" class="btn btn-default" id="personal_details_cancel"> Cancel</button>
+                                 <button type="button" class="btn btn-default" id="personal_details_save"> Save</button>
+                                 <button type="button" class="btn btn-primary" id="personal_details_submit">Submit</button>                            
+                                    </div>
+                                    <div class="col-md-3">
+                                       <button type="button" class="btn next" id="personal_details_next">Next</button> 
+                                    </div>
+                             </div>
+
+                      
+
+                          
+                             
+                           </div>
+                           <!-- Code Quality start-->
+                           <div class="tab-pane employ_data" id="nav-step2" role="tabpanel" aria-labelledby="step2">
+                     
+                              <div class="row">
+                                <div class="col-md-4">
+                                   <p>Employer*</p>
+                                   <input type="text" placeholder="Type" class="form-control" id="quality-project-name">
+                                  
+                                </div>
+
+                                <div class="col-md-4">
+                                 <p>Employers Phone</p>
+                                 <input type="text" placeholder="Type" class="form-control" id="quality-project-name">
+                                
+                                </div>
+                                <div class="col-md-4">
+                                    <p>Employement Status*</p>
+                                    <input type="text" placeholder="Type" class="form-control" id="quality-project-name">
+                                
+                                </div>
+                             </div>
+                              <div class="row">
+                                <div class="col-md-4">
+                                   <p> How Often are you paid?*</p>
+                                   <select class="form-control" id="quality-source">
+                                    <option value="lastday"> Last Day Of The Month</option>
+                                    <option value="lastmonth">First Day Of The Month</option>  
+                                    <option value="Weekly">Weekly</option>
+                                 </select>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <p>Last Pay Date*</p>
+                                    <input type="date" placeholder="Type" class="form-control" id="quality-reportpath">
+
+                                </div>
+                                <div class="col-md-4">
+                                    <p>Next Pay Date*</p>
+                                    <input type="date" placeholder="Type" class="form-control" id="quality-username">
+
+                                </div>
+                             </div>
+                             <div class="row">
+                                <div class="col-md-4">
+                                   <p>Last Take Home Pay Cheque Amount*</p>
+                                   <input type="text" placeholder="Type" class="form-control"  id="quality-password">
+                                  
+                                </div>
+                                <div class="col-md-4">
+                                 <p>Take Home For The Month Of May*</p>
+                                 <input type="text" placeholder="Type" class="form-control"  id="quality-password">
+                                
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-2">
+                             <a href="Customerform.html"> <button type="button" class="btn back" id="personal_details_next">Back</button> </a> 
+                              </div>
+                              <div class="col-md-7">
+                               <button type="button" class="btn btn-default" id="employee_details_cancel"> Cancel</button>
+                               <button type="button" class="btn btn-default" id="employee_details_save"> Save</button>
+                               <button type="button" class="btn btn-primary" id="employee_details_submit">Submit</button>                            
+                                  </div>
+                                  <div class="col-md-3"></div>
+                           </div>
+
+                        
+                          
+                           
+                           </div>
+                           <!-- Digital Security start-->
+                           <!-- <div class="tab-pane fade security_code" id="nav-digital" role="tabpanel" aria-labelledby="mobile">
+                            <h5>Platform</h5>
+                      
+                           </div> -->
+                     </div>
+                  </div>
+               </div>
+            </section>
+
+<div class="submit_form">
+   <div class="form_header">
+      <h6> Successful </h6>
+      <img src="images/x-circle.svg" id="close_submitform">
+   </div>
+   <div class="form_body">
+      <h5 class="green"> You have been approved for $500. Please contact us today to get your money! </h5>
+      <p>For your security, before we send the money into your account, please send us copies of the following by email, fax, or upload to us directly through the portal below.<br/> a. A copy of your valid government issued identity, (if the address on the ID does not match the application please include a copy of a recent bill that does.)<br/> b. A copy of your most recent proof of income. <br/>c. Proof of current address (example a copy of an utility bill within last 60days or driver's license) *Digital images taken by your phone or camera are acceptable. </p>
+ <div class="col-md-7">  <button type="button" class="btn btn-primary submit_ok"> OK </button> </div>
+     
+   </div>
+</div>
+
+         </div>
+         <div id="mystatus">....</div>
+     
+      </div>
+	<!--main container endss-->
+	<!--    copy rights starts-->
+	
+	<!--    copy rights ends-->
+   <script src="js/profile.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script>
+	$(".user-profile-main").click(function() {
+		$(".user-profile-details").addClass("show-div");
+		event.stopPropagation();
+	});
+	$(".close-click").click(function() {
+		$(".user-profile-details").removeClass("show-div");
+		event.stopPropagation();
+	});
+	$('body').click(function() {
+		$('.user-profile-details').removeClass("show-div");
+	});
+
+   $('#personal_details_next').click(function() {
+		$('.pers_data,#personaldetails').removeClass("active");
+      $('.employ_data,#employeedetails').addClass("active");
+	}); 
+
+   $('#personal_details_submit,#employee_details_submit').click(function() {   
+		$('.submit_form').css("display","block"); 
+	});
+
+   $('#personal_details_save,#employee_details_save').click(function() { 
+   $("#mystatus").addClass('successstatus').html('Details Saved Successfully').css("display", "block");
+   window.setInterval(function(){  $("#mystatus").css("display", "none").removeClass('successstatus'); }, 4000);
+      });       
+   $('#close_submitform,.submit_ok').click(function() {
+		$('.submit_form').css("display","none"); 
+	});
+	</script>
+
+  
+</body>
+
+</html>

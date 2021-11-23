@@ -1,0 +1,60 @@
+Started by upstream project "[8mha:////4AxtOWQDzgxPtkChI8MwjoI+EXrF8QWYDI4irAZGyKVZAAAAtR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzDEgZ7/az8JH2X1DL/gmIosyAnvzI3Na/ELb8o0BEs5plXkppelFiSmZ+HLg0AenRG//QAAAA=[0mDevOps/DeploymentForQA/IntegrationDeploymentForQA" build number [8mha:////4L1Diex1ITMA9aFWoWM3GJaUMpgdLiusuNyMwM35GmLsAAAAth+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZH/az8JH2X1DL/gmIosyAnvzI3Na/ELb8oECLtmVeSml6UWJKZn4cubWwEAHCleFL2AAAA[0m32
+originally caused by:
+ Started by upstream project "[8mha:////4HTWF5YEnkxdrInRlTGd7bW06444Zh46u0b8bb3radxbAAAAqB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZ5/az8JP2Q1MTkjNSiYjfn0PiAzJz8ErBosLOjPgAHjGSL1AAAAA==[0mTeachersFCU_Pilot/SCA" build number [8mha:////4JyJYBOWLOjlY7g7Wme30CwYoHukS9kbtmpvtWUd6MMwAAAAqh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZF/az8JP2Q1MTkjNSiYjfn0PiAzJz8ErBosLOjvqEJAJJFxRHWAAAA[0m14
+ originally caused by:
+  Started by upstream project "[8mha:////4I2nWaeyl1pNvlhJAi5LxAAjt+PbY/eYCqlCbESRV1kMAAAAtB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAylEgYd/az8JH33zBKP0qR4z7yS1PSixJJMoBaweLBjcEh8cH5eYlFgaVKqPgAcROQD4QAAAA==[0mGitHub_Integrations/SAST_SonarQube" build number [8mha:////4DLDuR7EcQe0fgGayGyo4tX0GKF+x6G52bdQ5PrazWVgAAAAth+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgY9/az8JH33zBKP0qR4z7yS1PSixJJMoBaweLBjcEh8cH5eYlFgaVKqvrEZABZLZWPjAAAA[0m36
+  originally caused by:
+   Started by user [8mha:////4Gk7IKg+dTxI+3Ep7eR/4beYL3G84otaPgjFxhAcMGMwAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Posting JSON message to RabbitMQ:
+{
+  "url": "http://10.43.9.176:8090/job/TeachersFCU_Pilot/job/WebServices_Smoke/19/",
+  "build_job_name": "TeachersFCU_Pilot/WebServices_Smoke",
+  "build_number": 19,
+  "jenkins_master_fqdn": "Flexib",
+  "state": "STARTED",
+  "causes": "[UpstreamCause, Started by upstream project \"DevOps/DeploymentForQA/IntegrationDeploymentForQA\" build number 32]",
+  "parameters":   [
+    "ProjectPath=F:\\Flexib\\Postman\\SmokeTest",
+    "PostmanCollection=F:\\Flexib\\Postman\\SmokeTest\\TeachersFCU_SmokeServices.json",
+    "GlobalVariables=F:\\Flexib\\Postman\\SmokeTest\\Teachers_globals.json",
+    "ReportName=Services_SmokeTest",
+    "itr=2"
+  ]
+}
+Building in workspace F:\Jenkins_Jobs\workspace\TeachersFCU_Pilot\WebServices_Smoke
+[WebServices_Smoke] $ cmd /c call C:\Users\FLEXIB~1\AppData\Local\Temp\2\jenkins855020778502097835.bat
+
+F:\Jenkins_Jobs\workspace\TeachersFCU_Pilot\WebServices_Smoke>F:
+
+F:\Jenkins_Jobs\workspace\TeachersFCU_Pilot\WebServices_Smoke>cd "F:\Flexib\Postman\SmokeTest" 
+
+F:\Flexib\Postman\SmokeTest>RMDIR "Reports" /S /Q 
+
+F:\Flexib\Postman\SmokeTest>newman run F:\Flexib\Postman\SmokeTest\TeachersFCU_SmokeServices.json -g F:\Flexib\Postman\SmokeTest\Teachers_globals.json -n 2 --reporters htmlextra --reporter-htmlextra-export F:\Flexib\Postman\SmokeTest/Reports/Report.html --reporter-htmlextra-title "Services_SmokeTest" 
+Using htmlextra version 1.21.0
+Created the htmlextra report.
+Build step 'Execute Windows batch command' marked build as failure
+[htmlpublisher] Archiving HTML reports...
+[htmlpublisher] Archiving at PROJECT level F:/Flexib/Postman/SmokeTest/Reports to F:\Jenkins_Jobs\jobs\TeachersFCU_Pilot\jobs\WebServices_Smoke\htmlreports\HTML_20Report
+Posting JSON message to RabbitMQ:
+{
+  "url": "http://10.43.9.176:8090/job/TeachersFCU_Pilot/job/WebServices_Smoke/19/",
+  "build_job_name": "TeachersFCU_Pilot/WebServices_Smoke",
+  "build_number": 19,
+  "jenkins_master_fqdn": "Flexib",
+  "state": "COMPLETED",
+  "build_duration": 26349,
+  "status": "FAILURE",
+  "failurecauses": [],
+  "parameters":   [
+    "ProjectPath=F:\\Flexib\\Postman\\SmokeTest",
+    "PostmanCollection=F:\\Flexib\\Postman\\SmokeTest\\TeachersFCU_SmokeServices.json",
+    "GlobalVariables=F:\\Flexib\\Postman\\SmokeTest\\Teachers_globals.json",
+    "ReportName=Services_SmokeTest",
+    "itr=2"
+  ]
+}
+Notifying upstream projects of job completion
+Triggering a new build of [8mha:////4OvJhGWuYUa0owN5SvVuD7qUV2Fk1Hymugk9KjHYda3VAAAAux+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAydEgYT/az8JP2Q1MTkjNSiYjfn0PiAzJz8ErCoW2lecklmfl5ijmNpSX5uIogdH56apA8AooNneOkAAAA=[0mTeachersFCU_Pilot » FunctionalAutomation_Web
+Finished: FAILURE

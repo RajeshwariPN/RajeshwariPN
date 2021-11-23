@@ -1,0 +1,37 @@
+Started by user [8mha:////4Gk7IKg+dTxI+3Ep7eR/4beYL3G84otaPgjFxhAcMGMwAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Posting JSON message to RabbitMQ:
+{
+  "url": "http://10.43.9.176:8090/job/TeachersFCU_Pilot/job/WebServices/1/",
+  "build_job_name": "TeachersFCU_Pilot/WebServices",
+  "build_number": 1,
+  "jenkins_master_fqdn": "Flexib",
+  "state": "STARTED",
+  "causes": "[UserIdCause, Started by user admin]",
+  "parameters": []
+}
+Building in workspace F:\Jenkins_Jobs\workspace\TeachersFCU_Pilot\WebServices
+[WebServices] $ cmd /c call C:\Users\FLEXIB~1\AppData\Local\Temp\2\jenkins3510924956550450499.bat
+
+F:\Jenkins_Jobs\workspace\TeachersFCU_Pilot\WebServices>F:
+
+F:\Jenkins_Jobs\workspace\TeachersFCU_Pilot\WebServices>cd "F:\Flexib\Postman\chucknorris" 
+
+F:\Flexib\Postman\chucknorris>RMDIR "Reports" /S /Q 
+
+F:\Flexib\Postman\chucknorris>newman run F:\Flexib\Postman\chucknorris\api.chucknorris.jokes.postman_collection.json -g F:\Flexib\Postman\chucknorris\MyWorkspace.postman_globals.json --reporters htmlextra --reporter-htmlextra-export F:/Flexib/Postman/chucknorris/Reports/Report.html 
+Using htmlextra version 1.21.0
+Created the htmlextra report.
+Posting JSON message to RabbitMQ:
+{
+  "url": "http://10.43.9.176:8090/job/TeachersFCU_Pilot/job/WebServices/1/",
+  "build_job_name": "TeachersFCU_Pilot/WebServices",
+  "build_number": 1,
+  "jenkins_master_fqdn": "Flexib",
+  "state": "COMPLETED",
+  "build_duration": 7012,
+  "status": "SUCCESS",
+  "parameters": []
+}
+Notifying upstream projects of job completion
+Finished: SUCCESS

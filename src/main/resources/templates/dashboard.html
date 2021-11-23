@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>FLIXIB</title>
+      <script src="js/jquery3.6.0.min.js"></script>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/navbar.css">
+      <link rel="stylesheet" href="css/sidebar.css">
+      <link rel="stylesheet" href="css/automation.css">
+      <link rel="stylesheet" href="css/dashboard.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/daterangepicker.css">
+     
+      <!-- <script src="js/jquery.min.js"></script> -->
+
+   </head>
+   <body>
+      <!--top nav starts-->
+      <div class="navbarFixed">
+         <div class="grid-icon"> <img src="images/grid.svg"> </div>
+         <div class="logo-container"> <img src="images/Flexib-icon.svg"> </div>
+         <div class="right-allign">
+            <div class="searchbar-section">
+               <div class="inputareain">
+                  <input type="text" class="form-control" placeholder="Search"> <img src="images/dashboard/Search.svg" class="search"> 
+               </div>
+            </div>
+            <div class="bell-icon">
+               <div class="bell">
+                  <img src="images/bell.svg">
+                  <div class="nottification"></div>
+               </div>
+            </div>
+            <div class="dropdown-profile">
+               <div class="user-profile-main">
+                  <div class="userdata">
+                     <h4>Manager</h4>
+                     <p>Last Login 20/09/2021</p>
+                  </div>
+                  <div class="user-image"><img src="images/user.png"></div>
+                  <div class="user-profile-details">
+                     <div class="full-width close-click">
+                        <div class="user-details">
+                           <div class="userdata">
+                              <h4>Rajesh Krishnan</h4>
+                              <p class="position-in">Admin</p>
+                           </div>
+                           <div class="user-image"><img src="images/user.png"></div>
+                        </div>
+                     </div>
+                     <div class="full-width user-details-list">
+                        <ul>
+                           <li>
+                              <a> <img src="images/user-icon.svg"> <span>My Profile</span> </a>
+                           </li>
+                           <li>
+                              <a> <img src="images/settings.svg"> <span>Settings</span> </a>
+                           </li>
+                           <!--
+                              <li>
+                                 <a>
+                                     <img src="images/user-icon.svg"> <span>Theme</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a>
+                                     <img src="images/users.svg"> <span>Entity Change</span>
+                                 </a>
+                              </li>
+                              -->
+                           <li>
+                              <a> <img src="images/log-in.svg"> <span>Logout</span> </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--top nav endss-->
+      <!--side menu starts-->
+      <div class="side-menubar">
+         <ul>
+            <li>
+               <a><img src="images/dashboard/Dashboard.svg" class="menu-icon"></a>
+               <div class="hover-menu"> <a href="dashboard.html">Dashboard</a> </div>
+            </li>
+            <li>
+               <a><img src="images/dashboard/Automation.svg" class="menu-icon"></a>
+               <div class="hover-menu"> <a href="Automation.html">Digital Automation</a> <a href="Performance.html">Perfomance</a> <a href="security.html">Security</a> <a href="QAOPS.html">QA Ops</a> </div>
+            </li>
+            <li>
+               <a><img src="images/dashboard/Create-new-projecy.svg" class="menu-icon"></a>
+               <div class="hover-menu"> <a href="#">Create New Project</a> </div>
+            </li>
+            <li>
+               <a><img src="images/dashboard/Reports.svg" class="menu-icon"></a>
+               <div class="hover-menu"> <a href="Reports.html">Reports</a> </div>
+            </li>
+            <li>
+               <a><img src="images/dashboard/Monitoring.svg" class="menu-icon width"></a>
+               <div class="hover-menu"> <a href="#">Monitoring</a> </div>
+            </li>
+            <li>
+               <a><img src="images/dashboard/Continiuos-testing.svg" class="menu-icon"></a>
+               <div class="hover-menu"> <a href="Testing.html">Continiuos Testing</a> </div>
+            </li>
+            <li>
+               <a><img src="images/dashboard/Defect-Tracker.svg" class="menu-icon"></a>
+               <div class="hover-menu"> <a href="Defect-tacker.html">Defect Tracker</a> </div>
+            </li>
+         </ul>
+      </div>
+      <!--side menu endss-->
+      <!--main container starts-->
+      <div class="main-container-section">
+
+         <div class="container-fluid">
+
+            <section id="automation-header">
+
+               <div class="container">
+                  <div class="full-width common-padd-left">
+
+                  </div>
+                  <div class="full-width automation-path relative common-padd-left dash_head">
+                     <img src="images/web-automation/arrow-left-circle.svg" class="d-arr left-arrow">
+                     <select class=" project-name " name="project" id="head_project"> 
+                     </select>
+
+                     <img src="images/dashboard/Icon - Calendar.svg"  name="datefilter" class="Calendaricon">
+                     <input type="text" name="datefilter" placeholder="select" value="" id="mycalender">
+                     <!-- <input type="text" name="datefilter" value="" placeholder="select" /> -->
+                     <p>Dashboard</p>
+                     
+                  </div>
+               </div>
+            </section>
+
+
+
+
+            
+
+            <section id="tabs">
+               <div class="container">
+
+                  <div class="row" id="digitalog">
+                     
+                     <div class="crt-spc">
+                        <div class="full-width">
+                          
+                             <canvas class="charts" id="dashboard_chat"  style="width:50%;max-width:70px;height:128px !important;"></canvas>
+                         <div class="canvas-caoption"> <p>09</p></div> 
+                         <div class="">
+                         <div class="chart-info">
+                            <p>Automation</p>
+                         </div>
+                         <div class="chart-info1">
+                           <p class="mr-4">4 Completed</p>
+                           <span  class="ml-2">2 Failed</span>
+                        </div>
+                        <div class="chart-info2">
+                           <p>3 In-Progress</p>
+                          
+                        </div>
+                     </div>
+                        </div>
+                     </div>
+
+
+
+
+                     <div class="crt-spc">
+                        <div class="full-width">
+                          
+                             <canvas class="charts" id="dashboard_chat1"  style="width:50%;max-width:70px;height:128px !important;"></canvas>
+                             <div class="canvas-caoption"> <p>05</p></div> 
+                         <div class="">
+                         <div class="chart-info">
+                            <p>Performance</p>
+                         </div>
+                         <div class="chart-info1">
+                           <p class="mr-4">2 Completed</p>
+                           <span  class="ml-2">1 Failed</span>
+                        </div>
+                        <div class="chart-info2">
+                           <p>2 In-Progress</p>
+                          
+                        </div>
+                     </div>
+                        </div>
+                     </div>
+
+                     <div class="crt-spc">
+                        <div class="full-width">
+                          
+                             <canvas class="charts" id="dashboard_chat2"  style="width:50%;max-width:70px;height:128px !important;"></canvas>
+                             <div class="canvas-caoption"> <p>07</p></div> 
+                         <div class="">
+                         <div class="chart-info">
+                            <p>Security</p>
+                         </div>
+                         <div class="chart-info1">
+                           <p class="mr-4">4 Completed</p>
+                           <span  class="ml-2">1 Failed</span>
+                        </div>
+                        <div class="chart-info2">
+                           <p>2 In-Progress</p>
+                          
+                        </div>
+                     </div>
+                        </div>
+                     </div>
+
+                     <div class="crt-spc">
+                        <div class="full-width">
+                           
+                             <canvas class="charts" id="dashboard_chat3"  style="width:50%;max-width:70px;height:128px !important;"></canvas>
+                             <div class="canvas-caoption1"> <p>12</p></div> 
+                         <div class="">
+                         <div class="chart-info">
+                            <p>QAOps</p>
+                         </div>
+                         <div class="chart-info1">
+                           <p class="mr-4">7 Completed</p>
+                           <span  class="ml-2">2 Failed</span>
+                        </div>
+                        <div class="chart-info2">
+                           <p>3 In-Progress</p>
+                          
+                        </div>
+                     </div>
+                        </div>
+                     </div>
+
+                     </div>
+
+
+                  <div class="row">
+                     <div class="col-md-12 ">
+                        <h5>List of Projects</h5>
+                        <nav>
+                           <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                               <a class="nav-item nav-link active" id="web" data-toggle="tab" href="#nav-web" role="tab" aria-controls="nav-web" aria-selected="true">All
+                                </a>
+                               <a class="nav-item nav-link" id="visual" data-toggle="tab" href="#nav-visual" role="tab" aria-controls="nav-visual" aria-selected="false">In Progress
+                                
+                               </a> 
+                               <a class="nav-item nav-link" id="mobile" data-toggle="tab" href="#nav-mobile" role="tab" aria-controls="nav-mobile" aria-selected="false">Completed
+                                
+                               </a> 
+                               <a class="nav-item nav-link" id="api" data-toggle="tab" href="#nav-api" role="tab" aria-controls="nav-api" aria-selected="false">Failed
+                                
+                               </a> 
+                              </div>
+                           <hr>
+                        </nav>
+                        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+
+                           <!--   Web Automation -->
+                           <div class="tab-pane fade show active" id="nav-web" role="tabpanel" aria-labelledby="Web">
+                              <!-- <h4 class="heading-common">Automated execution of Web Application functionality across browsers</h4> -->
+                             
+                              <div class="row">
+                                 <table id="example" class="stripe row-border order-column" style="width:100%">
+                                    <thead class="d-head">
+                                        <tr>
+                                           <th> <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1"></th>
+                                            <th>Name <img src="images/sort.png" alt=""> </th>
+                                            <th>Test Type <img src="images/sort.png" alt=""></th>
+                                            <th>Owner <img src="images/sort.png" alt=""></th>
+                                            <th>Duration <img src="images/sort.png" alt=""></th>
+                                            <th>Time left to finish <img src="images/sort.png" alt=""></th>
+                                            <th>Started <img src="images/sort.png" alt=""></th>
+                                            <th>Status <img src="images/sort.png" alt=""></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="t-body">
+                                        <tr>
+                                            <th> <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1"></th>
+
+                                            <td>SCL</td>
+                                            <td>Automation</td>
+                                            <td><span class="org">A</span> Anil</td>
+                                            <td>13 mins</td>
+                                            <td>-</td>
+                                            <td>Sep 20,2021 10:08:53 AM</td>
+                                            <td><span class="com">Completed</span> </td>
+                                        </tr>
+                                        <tr>
+                                          <th> <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1"></th>
+
+                                            <td>SCL</td>
+                                            <td>Performance</td>
+                                            <td><span class="grn">R</span> Ravi</td>
+                                            <td>5 mins</td>
+                                            <td>-</td>
+                                            <td>Sep 20,2021 10:30:00 AM</td>
+                                            <td><span class="fail">Failed</span> </td>
+                                        </tr>
+                                        <tr>
+                                          <th> <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1"></th>
+
+                                            <td>SCL</td>
+                                            <td>QAOps</td>
+                                            <td><span class="rd">P</span> Prasad</td>
+                                            <td>-</td>
+                                            <td>8 mins</td>
+                                            <td>Sep 20,2021 11:05:03 AM</td>
+                                            <td><span class="in-prog">In Progress</span> </td>
+                                        </tr>
+                                        <tr>
+                                          <th> <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1"></th>
+
+                                            <td>SCL</td>
+                                            <td>Security</td>
+                                            <td><span class="ble">S</span> Sai</td>
+                                            <td>10 mins</td>
+                                            <td>-</td>
+                                            <td>Sep 20,2021 12:08:50 PM</td>
+                                            <td><span class="com">Completed</span> </td>
+                                        </tr>
+                                       
+                                        <tr>
+                                          <th> <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1"></th>
+
+                                            <td>SCL</td>
+                                            <td>Automation</td>
+                                            <td> <span class="org">B</span> Bharat</td>
+                                            <td>11 mins</td>
+                                            <td>-</td>
+                                            <td>Sep 20,2021 1:05:33 PM</td>
+                                            <td><span class="com">Completed</span> </td>
+                                        </tr>
+  
+                                     
+
+
+                                    </tbody>
+                                </table>
+
+
+                                <div class="pgn">
+                                   <div class="pgn-box">
+                                   <p>Selected 2 out of 74</p>
+                                 </div>
+                                 <div class="pgn-box1">
+                                    <p class="pr-2">11 - 20 of 200</p> | <p class="pl-2">20 per page</p>
+                                 </div>
+                                 </div>
+                                 
+                                 
+
+                              </div>
+
+
+                           </div>
+                           <!-- Visual Automation start-->
+                           <div class="tab-pane " id="nav-visual" role="tabpanel" aria-labelledby="visual">
+                                <div class="row">
+                           
+                                 <table id="example1" class="stripe row-border order-column" style="width:100%">
+                                    <thead class="d-head">
+                                        <tr>
+                                           <th> <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1"></th>
+                                            <th>Name <img src="images/sort.png" alt=""> </th>
+                                            <th>Test Type <img src="images/sort.png" alt=""></th>
+                                            <th>Owner <img src="images/sort.png" alt=""></th>
+                                            <th>Duration <img src="images/sort.png" alt=""></th>
+                                            <th>Time left to finish <img src="images/sort.png" alt=""></th>
+                                            <th>Started <img src="images/sort.png" alt=""></th>
+                                            <th>Status <img src="images/sort.png" alt=""></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="t-body">
+                                       <tr>
+                                          <th> <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1"></th>
+                                            <td>SCL</td>
+                                            <td>QAOps</td>
+                                            <td><span class="rd">A</span> Owner A</td>
+                                            <td>-</td>
+                                            <td>30 days</td>
+                                            <td>Jan 12,2020 12:08:53 PM</td>
+                                            <td><span class="in-prog">In Progress</span> </td>
+                                        </tr>
+                                        <tr>
+                                          <th> <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1"></th>
+                                            <td>SCL</td>
+                                            <td>QAOps</td>
+                                            <td><span class="rd">A</span> Owner A</td>
+                                            <td>-</td>
+                                            <td>30 days</td>
+                                            <td>Jan 12,2020 12:08:53 PM</td>
+                                            <td><span class="in-prog">In Progress</span> </td>
+                                        </tr>
+                                        <tr>
+                                          <th> <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1"></th>
+                                            <td>SCL</td>
+                                            <td>QAOps</td>
+                                            <td><span class="rd">A</span> Owner A</td>
+                                            <td>-</td>
+                                            <td>30 days</td>
+                                            <td>Jan 12,2020 12:08:53 PM</td>
+                                            <td><span class="in-prog">In Progress</span> </td>
+                                        </tr>
+                                
+                                    </tbody>
+                                </table>
+                             
+                              </div>
+
+
+                           </div>
+                           <!-- Mobile Automation start-->
+                           <div class="tab-pane fade" id="nav-mobile" role="tabpanel" aria-labelledby="mobile">
+                              <div class="row">
+                           
+                                 <table id="example2" class="stripe row-border order-column" style="width:100%">
+                                    <thead class="d-head">
+                                        <tr>
+                                           <th> <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1"></th>
+                                            <th>Name <img src="images/sort.png" alt=""> </th>
+                                            <th>Test Type <img src="images/sort.png" alt=""></th>
+                                            <th>Owner <img src="images/sort.png" alt=""></th>
+                                            <th>Duration <img src="images/sort.png" alt=""></th>
+                                            <th>Time left to finish <img src="images/sort.png" alt=""></th>
+                                            <th>Started <img src="images/sort.png" alt=""></th>
+                                            <th>Status <img src="images/sort.png" alt=""></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="t-body">
+                                       <tr>
+                                          <th> <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1"></th>
+
+                                            <td>SCL</td>
+                                            <td>Automation</td>
+                                            <td> <span class="org">A</span> Owner A</td>
+                                            <td>13 mins</td>
+                                            <td>-</td>
+                                            <td>Jan 12,2020 12:08:53 PM</td>
+                                            <td><span class="com">Completed</span> </td>
+                                        </tr>
+                                        <tr>
+                                          <th> <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1"></th>
+
+                                            <td>SCL</td>
+                                            <td>Automation</td>
+                                            <td><span class="ble">A</span> Owner A</td>
+                                            <td>13 mins</td>
+                                            <td>-</td>
+                                            <td>Jan 12,2020 12:08:53 PM</td>
+                                            <td><span class="com">Completed</span> </td>
+                                        </tr>
+                                        <tr>
+                                          <th> <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1"></th>
+
+                                            <td>SCL</td>
+                                            <td>Automation</td>
+                                            <td> <span class="org">A</span> Owner A</td>
+                                            <td>13 mins</td>
+                                            <td>-</td>
+                                            <td>Jan 12,2020 12:08:53 PM</td>
+                                            <td><span class="com">Completed</span> </td>
+                                        </tr>
+                                       </tbody>
+                                       </table>
+                                    </div>
+                           </div>
+                           <!-- API Automation start-->
+                           <div class="tab-pane fade" id="nav-api" role="tabpanel" aria-labelledby="api"> 
+                              <div class="row">
+                           
+                                 <table id="example3" class="stripe row-border order-column" style="width:100%">
+                                    <thead class="d-head">
+                                        <tr>
+                                           <th> <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1"></th>
+                                            <th>Name <img src="images/sort.png" alt=""> </th>
+                                            <th>Test Type <img src="images/sort.png" alt=""></th>
+                                            <th>Owner <img src="images/sort.png" alt=""></th>
+                                            <th>Duration <img src="images/sort.png" alt=""></th>
+                                            <th>Time left to finish <img src="images/sort.png" alt=""></th>
+                                            <th>Started <img src="images/sort.png" alt=""></th>
+                                            <th>Status <img src="images/sort.png" alt=""></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="t-body">
+                                       <tr>
+                                          <th> <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1"></th>
+                                            <td>SCL</td>
+                                            <td>QAOps</td>
+                                            <td><span class="rd">A</span> Owner A</td>
+                                            <td>-</td>
+                                            <td>30 days</td>
+                                            <td>Jan 12,2020 12:08:53 PM</td>
+                                            <td><span class="in-prog">In Progress</span> </td>
+                                        </tr>
+                                        <tr>
+                                          <th> <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1"></th>
+                                            <td>SCL</td>
+                                            <td>QAOps</td>
+                                            <td><span class="rd">A</span> Owner A</td>
+                                            <td>-</td>
+                                            <td>30 days</td>
+                                            <td>Jan 12,2020 12:08:53 PM</td>
+                                            <td><span class="in-prog">In Progress</span> </td>
+                                        </tr>
+                                       </tbody>
+                                 </table>
+                              </div>
+
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+      </div>
+	<!--main container endss-->
+	<!--    copy rights starts-->
+	<div class="copyright-container"> Copyright © 3i Infotech. All rights reserved. </div>
+	<!--    copy rights ends-->
+	
+   <script src="js/jquery3.6.0.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/jquery.dataTables.min.js"></script>
+   <script src="js/Chart.js"></script>
+   <script src="js/moment.min.js"></script>
+   <script src="js/daterangepicker.js"></script>
+	
+   <!-- <script src="js/jquery-3.6.1.min.js"></script> -->
+	<script>
+
+
+      $(document).ready(function() {
+    var table = $('#example,#example1,#example2,#example3').DataTable( {
+        scrollY:        "300px",
+        scrollX:        true,
+        scrollCollapse: true,
+        paging:         false,
+        fixedColumns:   {
+            left: 1,
+            right: 1
+        }
+    } );
+} );
+
+	$(".user-profile-main").click(function() {
+		$(".user-profile-details").addClass("show-div");
+		event.stopPropagation();
+	});
+	$(".close-click").click(function() {
+		$(".user-profile-details").removeClass("show-div");
+		event.stopPropagation();
+	});
+	$('body').click(function() {
+		$('.user-profile-details').removeClass("show-div");
+	});
+
+
+   const data = {
+		//labels: ['High', 'Medium', 'Low'],
+		datasets: [{
+			label: 'My First Dataset',
+			data: [300, 120, 60],
+			backgroundColor: ['#00A3B0', '#0761A6', '#DC0079'],
+			hoverOffset: 0
+		}]
+	};
+	// Analytic Chart Config
+	let analyticChart = document.getElementById("dashboard_chat");
+	const doughnutChart = new Chart(analyticChart, {
+		type: 'doughnut',
+		data: data,
+	});
+
+	let analyticChart1 = document.getElementById("dashboard_chat1");
+	const doughnutChart1 = new Chart(analyticChart1, {
+		type: 'doughnut',
+		data: data,
+	});
+
+	let analyticChart2 = document.getElementById("dashboard_chat2");
+	const doughnutChart2 = new Chart(analyticChart2, {
+		type: 'doughnut',
+		data: data,
+	});
+
+	let analyticChart3 = document.getElementById("dashboard_chat3");
+	const doughnutChart3 = new Chart(analyticChart3, {
+		type: 'doughnut',
+		data: data,
+	});
+
+	</script>
+	<script>
+     
+      // project list   
+         project_Function();
+         function project_Function() {
+          $.ajax({
+           type: "GET",
+          url: "https://api.github.com/orgs/vamsiui/projects",
+              headers:{
+                  Accept: "application/vnd.github.inertia-preview+json",
+              },
+           success: function(data) {
+               console.log(data);
+         for (var i = 0; i < data.length; i++) {
+             var select = document.getElementById("head_project");
+             var option = document.createElement("option");
+             option.text = data[i].name;
+             option.value = data[i].id;
+             select.add(option);
+                    }	
+           },
+           error: function(data, textStatus, jqXHR) {
+            console.log(data);
+           }
+          });
+         };
+         </script>
+<script type="text/javascript">
+   $(function() {
+   
+     $('input[name="datefilter"]').daterangepicker({
+         autoUpdateInput: false,
+         locale: {
+             cancelLabel: 'Clear'
+         }
+     });
+   
+     $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+         $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
+     });
+   
+     $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+         $(this).val('');
+     });
+   
+   });
+   </script>
+
+
+
+</body>
+
+</html>

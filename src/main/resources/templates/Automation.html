@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>FLIXIB</title>
+      <script src="jquery-3.6.1.min.js"></script>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/navbar.css">
+      <link rel="stylesheet" href="css/sidebar.css">
+      <link rel="stylesheet" href="css/automation.css">
+      <link rel="stylesheet" href="css/style.css">
+    
+   </head>
+   <body>
+      <!--top nav starts-->
+      <div class="navbarFixed">
+         <div class="grid-icon"> <img src="images/grid.svg"> </div>
+         <div class="logo-container"> <img src="images/Flexib-icon.svg"> </div>
+         <div class="right-allign">
+            <div class="searchbar-section">
+               <div class="inputareain">
+                  <input type="text" class="form-control" placeholder="Search"> <img src="images/dashboard/Search.svg" class="search"> 
+               </div>
+            </div>
+            <div class="bell-icon">
+               <div class="bell">
+                  <img src="images/bell.svg">
+                  <div class="nottification"></div>
+               </div>
+            </div>
+            <div class="dropdown-profile">
+               <div class="user-profile-main">
+                  <div class="userdata">
+                     <h4>Manager</h4>
+                     <p>Last Login 01/01/2021</p>
+                  </div>
+                  <div class="user-image"><img src="images/user.png"></div>
+                  <div class="user-profile-details">
+                     <div class="full-width close-click">
+                        <div class="user-details">
+                           <div class="userdata">
+                              <h4>Rajesh Krishnan</h4>
+                              <p class="position-in">Admin</p>
+                           </div>
+                           <div class="user-image"><img src="images/user.png"></div>
+                        </div>
+                     </div>
+                     <div class="full-width user-details-list">
+                        <ul>
+                           <li>
+                              <a> <img src="images/user-icon.svg"> <span>My Profile</span> </a>
+                           </li>
+                           <li>
+                              <a> <img src="images/settings.svg"> <span>Settings</span> </a>
+                           </li>
+                           <!--
+                              <li>
+                                 <a>
+                                     <img src="images/user-icon.svg"> <span>Theme</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a>
+                                     <img src="images/users.svg"> <span>Entity Change</span>
+                                 </a>
+                              </li>
+                              -->
+                           <li>
+                              <a> <img src="images/log-in.svg"> <span>Logout</span> </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--top nav endss-->
+      <!--side menu starts-->
+      <div class="side-menubar">
+         <ul>
+            <li>
+               <a><img src="images/dashboard/Dashboard.svg" class="menu-icon"></a>
+               <div class="hover-menu"> <a href="dashboard.html">Dashboard</a> </div>
+            </li>
+            <li>
+               <a><img src="images/dashboard/Automation.svg" class="menu-icon"></a>
+               <div class="hover-menu"> <a href="Automation.html">Digital Automation</a> <a href="Performance.html">Perfomance</a> <a href="security.html">Security</a> <a href="QAOPS.html">QA Ops</a> </div>
+            </li>
+            <li>
+               <a><img src="images/dashboard/Create-new-projecy.svg" class="menu-icon"></a>
+               <div class="hover-menu"> <a href="#">Create New Project</a> </div>
+            </li>
+            <li>
+               <a><img src="images/dashboard/Reports.svg" class="menu-icon"></a>
+               <div class="hover-menu"> <a href="Reports.html">Reports</a> </div>
+            </li>
+            <li>
+               <a><img src="images/dashboard/Monitoring.svg" class="menu-icon width"></a>
+               <div class="hover-menu"> <a href="#">Monitoring</a> </div>
+            </li>
+            <li>
+               <a><img src="images/dashboard/Continiuos-testing.svg" class="menu-icon"></a>
+               <div class="hover-menu"> <a href="Testing.html">Continiuos Testing</a> </div>
+            </li>
+            <li>
+               <a><img src="images/dashboard/Defect-Tracker.svg" class="menu-icon"></a>
+               <div class="hover-menu"> <a href="#">Defect Tracker</a> </div>
+            </li>
+         </ul>
+      </div>
+      <!--side menu endss-->
+      <!--main container starts-->
+      <div class="main-container-section">
+         <div class="container-fluid">
+            <section id="automation-header">
+               <div class="container">
+                  <div class="full-width common-padd-left">
+                     <h6>Automation</h6>
+                  </div>
+                  <div class="full-width automation-path relative common-padd-left">
+                     <img src="images/web-automation/arrow-left-circle.svg" class="left-arrow">
+                     <p>Home > Automation > <span id="page">Web  </span> Automation</p>
+                     <select class=" project-name" name="project" id="head_project">
+                       
+                     </select>
+                  </div>
+               </div>
+            </section>
+            <section id="tabs">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12 ">
+                        <nav>
+                           <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                               <a class="nav-item nav-link active" id="web" data-toggle="tab" href="#nav-web" role="tab" aria-controls="nav-web" aria-selected="true">Web Automation
+                                 <span class="titletip"><img src="images/web-automation/help-circle.svg"> <span class="texttop">Automated execution of Web Application functionality across browsers</span></span></a>
+                               <a class="nav-item nav-link" id="visual" data-toggle="tab" href="#nav-visual" role="tab" aria-controls="nav-visual" aria-selected="false">Visual Automation
+                                 <span class="titletip"><img src="images/web-automation/help-circle.svg"> <span class="texttop">Compare visual differences between UI Screens in various environments</span></span>
+                               </a> 
+                               <a class="nav-item nav-link" id="mobile" data-toggle="tab" href="#nav-mobile" role="tab" aria-controls="nav-mobile" aria-selected="false">Mobile Automation
+                                 <span class="titletip"><img src="images/web-automation/help-circle.svg"> <span class="texttop">Automated execution of Mobile App functionality across multiple devices</span></span>
+                               </a> 
+                               <a class="nav-item nav-link" id="api" data-toggle="tab" href="#nav-api" role="tab" aria-controls="nav-api" aria-selected="false">API Automation
+                                 <span class="titletip"><img src="images/web-automation/help-circle.svg"> <span class="texttop">Functional validation of Web & Micro Services with various parameters</span></span>
+                               </a> 
+                              </div>
+                           <a th:href = @{/fileupload}>  <div class="upload titletip"><img src="images/web-automation/Upload.svg"><span class="textleft">File Upload</span></div></a>
+                           
+                           <a th:href = @{/autodownload}><div class="download titletip"><img src="images/web-automation/Download.svg"><span class="textleft">Download Template</span></div></a>
+                           <hr>
+                        </nav>
+                        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                           <div class="row project-form">
+                              <div class="check-alert-top">
+                                 <div class="row">
+                                    <div class="col-md-9">
+                                       <p>Project Upload to Repository</p>
+                                    </div>
+                                    <div class="col-md-3"> <img src="images/web-automation/x-circle.svg" id="upload-form-hide"> </div>
+                                 </div>
+                              </div>
+                              <div class="row upload-form-details">
+                                 
+                                 <form action="">
+                                    
+                                    <label for="repo">Repository</label>
+                                    <br>
+                                    <select class="form-control" name="reposi" id="reposi">
+                                       <option value="git">GIT HUb</option>
+                                       <option value="svn">SVN</option>
+                                    </select>
+                                    <label for="up-project">Project</label>
+                                    <br>
+                                    <select class="form-control" name="uplod-name" id="uplod-name">
+                                       <option value="ABC">Project 1</option>
+                                       <option value="XYZ">Project 2</option>
+                                       <option value="PQR">Project 3</option>
+                                       <option value="BCD">Project 4</option>
+                                    </select>
+                                   
+                                    <label for="cate">Category</label>
+                                    <br>
+                                    <select class="form-control" name="project-name" id="project-name">
+                                       <option value="web">Web Application</option>
+                                       <option value="perfomance">Perfomance</option>
+                                       <option value="security">Security</option>
+                                       <option value="api">API Testing</option>
+                                    </select>
+                                    <div class="col-md-12 search-container">
+                                       <p>Project Directory</p>
+                                       <input type="text" placeholder="Search.." class="search-class" name="search2">
+                                       <button type="submit"><img src="images/dashboard/Search.svg"></button>
+                                       <br/> 
+                                    </div>
+                                    <br/>
+                                    <button type="submit" class="btn btn-primary" value="Submit">Upload to Repo</button>
+                                    <br/> 
+                                 </form>
+                              </div>
+                           </div>
+                           <!--   Web Automation -->
+                           <div class="tab-pane fade show active" id="nav-web" role="tabpanel" aria-labelledby="Web">
+                              <!-- <h4 class="heading-common">Automated execution of Web Application functionality across browsers</h4> -->
+                              <h5>Execution</h5>
+                              <div class="row">
+                                 <div class="col-md-4">
+                                    <p> Central Repository</p>
+                                    <select class="form-control" name="project-name" id="project-name">
+                                       <option value="GitHub"> GitHub</option>
+                                       <option value="Bitbucket">Bitbucket</option>
+                                       <option value="SVN">SVN</option>
+                                 
+                                    </select>
+                                 </div>
+
+                                 <div class="col-md-4">
+                                    <main class="form-container">
+                                       <div>
+                                          <!-- <p>Select</p> -->
+                                          <input id="radi" type="radio" class="chectout-select" value="radi" name="radi">
+                                          <label for="radi">Checkout project using structure</label>
+                                       </div>
+                                    </main>
+                                 </div>
+                                 <div class="col-md-4">
+                                    <main class="form-container">
+                                       <div>
+                                          <input id="radi2" type="radio" class="chectout-git" value="radi2" name="radi">
+                                          <label for="radi2">Checkout project with Git Access Key</label>
+                                       </div>
+                                    </main>
+                                 </div>
+                              </div>
+                              <div class="Checkout_str">
+                                 <div class="row">
+                                  
+                                 <div class="col-md-4 repo">
+                                    <p> Execution Package</p> 
+                                    <select class="form-control" name="web-repo" id="web-repo">                                   
+                                    </select>
+                                 </div>
+                                    <div class="col-md-4">
+                                       <p> Project Category</p>
+                                       <select class="form-control" name="database" id="database">
+                                          <option value="ABC">Maven</option>
+                                          <option value="XYZ">Gradle</option>
+                                          <option value="PQR">Testing</option>
+                                          <option value="BCD">ANT</option>
+                                       </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <p> Enter Access Token</p>
+                                       <input type="text" class="form-control" placeholder="Type in"> 
+                                    </div>
+                                 </div>
+                                 <div class="row parentdiv">
+                                    <div class="col-md-12 text-center">
+                                   <form action="#" th:action="@{/checkout}" method="POST">
+                                       <button type="submit" class="btn btn-primary" value="Checkout" id="checkout-git"> Checkout</button>
+                                    </form>                           
+                                    </div>
+                                 </div>
+                                 <div class="row checkoutalert">
+                                    <div class="ckeck-box">
+                                      <div class="check-alert-top">
+                                          <div class="row">
+                                             <div class="col-md-6">
+                                                <p>Successful</p>
+                                             </div>
+                                             <div class="col-md-6"> 
+                                                <img src="images/web-automation/x-circle.svg" id="check-hide">                                              </div>
+                                          </div>
+                                       </div>
+                                       <div class="center-text">
+                                          <p>Checkout Successful to the Test Repository</p>
+                                          <button type="button" class="btn btn-warning checkout_close">Ok</button>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-md-4 search-container">
+                                       <p>Project Path</p>
+                                       <form class="searchbar" onclick="performClick('theFile');">
+                                          <input type="text" placeholder="Search.." name="search2" class="form-control">
+                                          <button type="button"><img src="images/dashboard/Search.svg"></button>
+                                          <input type="file" id="theFile" />
+                                       </form>
+                                    </div>
+                                 </div>
+                                 <br/>
+                                 <div class="row">
+                                    <div class="col-md-4">
+                                       <main class="form-container">
+                                          <div>
+                                             <!-- <p>Select</p> -->
+                                             <input id="xlsheet" type="radio" class="filechoose" value="" name="sheet">
+                                             <label for="xlsheet">Choose Runnable xlsx </label>
+                                          </div>
+                                       </main>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <main class="form-container">
+                                          <div>
+                                             <input id="xlsheet2" type="radio" class="directfile" value="" name="sheet">
+                                             <label for="xlsheet2">Direct Runnable File </label>
+                                          </div>
+                                       </main>
+                                    </div>
+                                 </div>
+                                 <div class="choose-option">
+                                    <div class=" row file-choose">
+                                       <div class="col-md-12">
+                                          <div class="file-drop-area"> <span class="fake-btn">Choose files</span> <span class="file-msg">or drag and drop files here</span>
+                                             <input class="file-input" type="file" multiple> 
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row parentdiv">
+                                       <div class="col-md-12 text-center">
+                                          <button type="button" class="btn btn-primary" value="Checkout" id="importsheet1"> Import Sheet</button>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-md-12">
+                                          <table id="example" class="display web_auto" style="width:100%">
+                                             <thead>
+                                                <tr>
+                                                   <th>Test Case ID <img src="images/sort.png" alt=""></th>
+                                                   <th>Test Case Name <img src="images/sort.png" alt=""></th>
+                                                   <th>Test Description <img src="images/sort.png" alt=""></th>
+                                                   <th>Test Script Name <img src="images/sort.png" alt=""></th>
+                                                   <th>Run Mode <img src="images/sort.png" alt=""></th>
+                                                </tr>
+                                             </thead>
+                                             <tbody>
+                                                <tr>
+                                                   <td>Project 1_TC_001_Approve</td>
+                                                   <td>Project 1_TC_001_Approve</td>
+                                                   <td>Project 1_TC_001_Approve</td>
+                                                   <td>Project 1_TC_001_Approve</td>
+                                                   <td>
+                                                      <label class="switch">
+                                                      <input type="checkbox"> <span class="slider round"></span> </label>
+                                                   </td>
+                                                </tr>
+                                                <tr>
+                                                   <td>Project 1_TC_001_Approve</td>
+                                                   <td>Project 1_TC_001_Approve</td>
+                                                   <td>Project 1_TC_001_Approve</td>
+                                                   <td>Project 1_TC_001_Approve</td>
+                                                   <td>
+                                                      <label class="switch">
+                                                      <input type="checkbox"> <span class="slider round"></span> </label>
+                                                   </td>
+                                                </tr>
+                                                <tr>
+                                                   <td>Project 1_TC_001_Approve</td>
+                                                   <td>Project 1_TC_001_Approve</td>
+                                                   <td>Project 1_TC_001_Approve</td>
+                                                   <td>Project 1_TC_001_Approve</td>
+                                                   <td>
+                                                      <label class="switch">
+                                                      <input type="checkbox"> <span class="slider round"></span> </label>
+                                                   </td>
+                                                </tr>
+                                                <tr>
+                                                   <td>Project 1_TC_001_Approve</td>
+                                                   <td>Project 1_TC_001_Approve</td>
+                                                   <td>Project 1_TC_001_Approve</td>
+                                                   <td>Project 1_TC_001_Approve</td>
+                                                   <td>
+                                                      <label class="switch">
+                                                      <input type="checkbox"> <span class="slider round"></span> </label>
+                                                   </td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row excute-report" id="xlsheet_btn">
+                                    <div class="col-md-6">
+                                    <form action="#" th:action="@{/execute/maven}" method="POST">
+                                       <a  href="#log"> <button type="submit" class="btn btn-primary " value="Execute" id="Execute"> Execute</button> </a>                                   </div>
+                                    </form>
+                                    <div class="col-md-6">
+                                       <button type="button" class="btn btn-default" value="Report" id="Report"> Report</button>
+                                    </div>
+                                 </div>
+                                 <div class="row" id="log">
+                                    <div class="col-md-12">
+                                       <div class="col-md-12 progress-console">
+                                          <div class=" col-md-12 progress-log">
+                                             <p>Progress</p>
+                                          </div>
+                                          <div class="col-md-12 progress-text"> <span>28.07.2021 12:30:12</span> <span class="black">Execution started</span>
+                                             <br/> <span>28.07.2021 12:30:12</span> <span class="black"> Process 1 started on thread 1</span>
+                                             <br/> <span>28.07.2021 12:30:12</span> <span class="green">Process 1 completed on thread 1</span>
+                                             <br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 2 started on thread 1</span>
+                                             <br/> <span>28.07.2021 12:30:12</span> <span class="red">Process 2 failed on thread 1</span>
+                                             <br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 3 started on thread 1</span>
+                                             <br/> <span>28.07.2021 12:30:12</span> <span class="green">Process 3 completed on thread 1</span>
+                                             <br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 4 started on thread 1</span> 
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!--2nd start-->
+                              <div class="Checkout_git">
+                                 <div class="row">
+                                    <div class="col-md-4">
+                                       <p> Enter Repository URL</p>
+                                       <input type="text" class="form-control" placeholder="Type in"> 
+                                    </div>
+                                    <div class="col-md-4">
+                                       <p> Enter Access Token</p>
+                                       <input type="text" class="form-control" placeholder="Type in"> 
+                                    </div>
+                                 </div>
+                                 <div class="row parentdiv">
+                                    <div class="col-md-12 text-center">
+                                    <form action="#" th:action="@{/checkout}" method="Get">
+                                       <button type="button" class="btn btn-primary" value="Checkout" id="checkout"> Checkout</button>
+                                       </form>
+                                    </div>
+                                 </div>
+                                 <div class="row checkoutalert">
+                                    <div class="ckeck-box">
+                                       <div class="check-alert-top">
+                                          <div class="row">
+                                             <div class="col-md-6">
+                                                <p>Successful</p>
+                                             </div>
+                                             <div class="col-md-6"> 
+                                                <img src="images/web-automation/x-circle.svg" id="check-hide">                                              </div>
+                                          </div>
+                                       </div>
+                                       <div class="center-text">
+                                          <p>Please checkout Successful to the Test Repository</p>
+                                          <button type="button" class="btn btn-warning checkout_close">Ok</button>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-md-4 search-container">
+                                       <p>Project Path</p>
+                                       <form class="searchbar" onclick="performClick('theFile');">
+                                          <input type="text" placeholder="Search.." name="search2" class="form-control">
+                                          <button type="button"><img src="images/dashboard/Search.svg"></button>
+                                          <input type="file" id="theFile" />
+                                       </form>
+                                    </div>
+                                 </div>
+                                 <br/>
+                                 <div class="file-choose">
+                                    <p>Choose Runnable xlsx :</p>
+                                    <div class="file-drop-area"> <span class="fake-btn">Choose files</span> <span class="file-msg">or drag and drop files here</span>
+                                       <input class="file-input" type="file" multiple> 
+                                    </div>
+                                 </div>
+                                 <div class="row parentdiv">
+                                    <div class="col-md-12 text-center">
+                                       <a  href="#importlog"> <button type="button" class="btn btn-primary" value="Checkout" id="git-importsheet"> Import Sheet</button></a>
+                                    </div>
+                                 </div>
+                                 <div class="row progress-console" id="importlog">
+                                    <div class="progress-log">
+                                       <p>Progress</p>
+                                    </div>
+                                    <div class="row progress-text">
+                                       <san>
+                                       28.07.2021 12:30:12</span> <span class="black">Execution started</span>
+                                       <br/> <span>28.07.2021 12:30:12</span> <span class="black"> Process 1 started on thread 1</span>
+                                       <br/> <span>28.07.2021 12:30:12</span> <span class="green">Process 1 completed on thread 1</span>
+                                       <br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 2 started on thread 1</span>
+                                       <br/> <span>28.07.2021 12:30:12</span> <span class="red">Process 2 failed on thread 1</span>
+                                       <br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 3 started on thread 1</span>
+                                       <br/> <span>28.07.2021 12:30:12</span> <span class="green">Process 3 completed on thread 1</span>
+                                       <br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 4 started on thread 1</span> 
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- Visual Automation start-->
+                           <div class="tab-pane " id="nav-visual" role="tabpanel" aria-labelledby="visual">
+                              <h5>Execution</h5>
+                              <div class="visual-list">
+                                 <ul class="stepper-bar">
+                                    <li class="stepper1" id="move">Initialize</li><li class="stepper2" id="move2">Create Reference</li><li class="stepper3 " id="move3">Test with reference</li><li class="stepper4 " id="move4">Approve / Decline</li>
+                                 </ul>
+                              </div>
+                              <div class="row">
+                                 <div class="col-md-4">
+                                    <p> Project Name</p>
+                                    <input type="text" class="form-control" placeholder="Type in"> 
+                                 </div>
+                                 <div class="col-md-4">
+                                    <p> Environment URL</p>
+                                    <input type="text" class="form-control" placeholder="Type in"> 
+                                 </div>
+                              </div>
+                           </br>
+                              <div class="row visual-btn">
+                                 <div class="col-md-6">
+                                <a href="#vislog"> <button type="button" class="btn btn-primary" id="btn-value">Initialize</button></a>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <button type="button" class="btn btn-info" id="Test_report">Report</button>
+                                 <button type="button" class="btn btn-info" id="Decline">Decline</button>
+                                 </div>
+                              </div>
+                              <div class="row install-success">
+                                 <div class="install-box">
+                                    <div class="install-alert-top">
+                                       <div class="row">
+                                          <div class="col-md-6">
+                                             <p>Successful</p>
+                                          </div>
+                                          <div class="col-md-6"> <img src="images/web-automation/x-circle.svg" id=""> </div>
+                                       </div>
+                                    </div>
+                                    <div class="text-center">
+                                       <p>Approved Successfully</p>
+                                       <button type="button" class="btn btn-warning approve_alert_close">Ok</button>
+                                    </div>
+                                 </div>
+                                 <div class="declain-box">
+                                    <div class="declain-alert-top">
+                                       <div class="row">
+                                          <div class="col-md-6">
+                                             <p>Declined</p>
+                                          </div>
+                                          <div class="col-md-6"> <img src="images/web-automation/x-circle.svg" id=""> </div>
+                                       </div>
+                                    </div>
+                                    <div class="text-center">
+                                       <p>Declined Please raise a defect for this Issue</p>
+                                       <button type="button" class="btn btn-warning decline_alert_close">Ok</button>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row" id="vislog">
+                                 <div class="col-md-12">
+                                    <div class="col-md-12 progress-console">
+                                       <div class=" col-md-12 progress-log">
+                                          <p>Progress</p>
+                                       </div>
+                                       <div class="col-md-12 progress-text"> <span>28.07.2021 12:30:12</span> <span class="black">Execution started</span>
+                                          <br/> <span>28.07.2021 12:30:12</span> <span class="black"> Process 1 started on thread 1</span>
+                                          <br/> <span>28.07.2021 12:30:12</span> <span class="green">Process 1 completed on thread 1</span>
+                                          <br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 2 started on thread 1</span>
+                                          <br/> <span>28.07.2021 12:30:12</span> <span class="red">Process 2 failed on thread 1</span>
+                                          <br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 3 started on thread 1</span>
+                                          <br/> <span>28.07.2021 12:30:12</span> <span class="green">Process 3 completed on thread 1</span>
+                                          <br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 4 started on thread 1</span> 
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- Mobile Automation start-->
+                           <div class="tab-pane fade" id="nav-mobile" role="tabpanel" aria-labelledby="mobile">
+                              <h5>Execution</h5>
+                              <div class="mobile-auto">
+                                 <form>
+                                    <div class="row">
+                                       <div class="col-md-4">
+                                          <p>Web Automation</p>
+                                          <input type="text" class="form-control" id="web-aut" placeholder="Enter" name="web-aut"> 
+                                       </div>
+                                       <div class="col-md-4">
+                                          <p> Script Location</p>
+                                          <select class="form-control" name="web-location" id="web-location">
+                                             <option value="ABC">Project 1</option>
+                                             <option value="XYZ">Project 2</option>
+                                             <option value="PQR">Project 3</option>
+                                             <option value="BCD">Project 4</option>
+                                             <option value="EFG">Project 5</option>
+                                          </select>
+                                       </div>
+                                       <div class="col-md-4">
+                                          <p>Authentication Token</p>
+                                          <input type="text" class="form-control" placeholder="Enter" name="web-token"> 
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-md-4">
+                                          <p>Android</p>
+                                          <select class="form-control" name="web-android" id="web-android">
+                                             <option value="S7">Samsung Galaxy S7</option>
+                                             <option value="S8">Samsung Galaxy S8</option>
+                                             <option value="S9">Samsung Galaxy S9</option>
+                                             <option value="Pixel-c">Google Pixel C Google Api Emulator</option>
+                                          </select>
+                                       </div>
+                                       <div class="col-md-5">
+                                          <p>Version</p>
+                                          <span>
+                                          <label class="form-check-label">
+                                          <input class="form-check-input" type="checkbox"> 11
+                                          </label>
+                                          </span> <span>
+                                          <label class="form-check-label">
+                                          <input class="form-check-input" type="checkbox"> 10.0
+                                          </label>
+                                          </span> <span>
+                                          <label class="form-check-label">
+                                          <input class="form-check-input" type="checkbox"> 9.0
+                                          </label>
+                                          </span> <span>
+                                          <label class="form-check-label">
+                                          <input class="form-check-input" type="checkbox"> 8.0
+                                          </label>
+                                          </span> <span>
+                                          <label class="form-check-label">
+                                          <input class="form-check-input" type="checkbox"> 8.1
+                                          </label>
+                                          </span> 
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-md-4">
+                                          <p>IOS</p>
+                                          <select class="form-control" name="web-ios" id="web-ios">
+                                             <option value="12pro">Iphone 12 Pro</option>
+                                             <option value="xr">Iphone XR</option>
+                                             <option value="11">Iphone 11</option>
+                                             <option value="10">Iphone 10</option>
+                                          </select>
+                                       </div>
+                                       <div class="col-md-5">
+                                          <p>Version</p>
+                                          <span>
+                                          <label class="form-check-label">
+                                          <input class="form-check-input" type="checkbox"> 14.3
+                                          </label>
+                                          </span> <span>
+                                          <label class="form-check-label">
+                                          <input class="form-check-input" type="checkbox"> 14.0
+                                          </label>
+                                          </span> <span>
+                                          <label class="form-check-label">
+                                          <input class="form-check-input" type="checkbox"> 13.4
+                                          </label>
+                                          </span> <span>
+                                          <label class="form-check-label">
+                                          <input class="form-check-input" type="checkbox"> 13.2
+                                          </label>
+                                          </span> <span>
+                                          <label class="form-check-label">
+                                          <input class="form-check-input" type="checkbox"> 13.0
+                                          </label>
+                                          </span> 
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-md-4">
+                                          <p>IPad</p>
+                                          <select class="form-control" name="web-ipad" id="web-ipad">
+                                             <option value="ipad4">Ipad Mini 4</option>
+                                             <option value="ipad-pro">Ipad Pro</option>
+                                             <option value="ipad-air">Ipad Air</option>
+                                             <option value="ipad-air2">Ipad Air 2</option>
+                                          </select>
+                                       </div>
+                                       <div class="col-md-5">
+                                          <p>Version</p>
+                                          <span>
+                                          <label class="form-check-label">
+                                          <input class="form-check-input" type="checkbox"> 14.3
+                                          </label>
+                                          </span> <span>
+                                          <label class="form-check-label">
+                                          <input class="form-check-input" type="checkbox"> 14.0
+                                          </label>
+                                          </span> <span>
+                                          <label class="form-check-label">
+                                          <input class="form-check-input" type="checkbox"> 13.4
+                                          </label>
+                                          </span> <span>
+                                          <label class="form-check-label">
+                                          <input class="form-check-input" type="checkbox"> 13.2
+                                          </label>
+                                          </span> <span>
+                                          <label class="form-check-label">
+                                          <input class="form-check-input" type="checkbox"> 13.0
+                                          </label>
+                                          </span> 
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-md-4">
+                                          <p>Username</p>
+                                          <input type="text" class="form-control" id="Username" placeholder="Enter" name="Username"> 
+                                       </div>
+                                       <div class="col-md-4">
+                                          <p>Password</p>
+                                          <input type="password" class="form-control" placeholder="Enter password" name="pswd"> 
+                                       </div>
+                                       <div class="col-md-4">
+                                          <p>Command to execute</p>
+                                          <input type="text" class="form-control" placeholder="Enter password" name="command"> 
+                                       </div>
+                                    </div>
+                                    <div class="row excute-report">
+                                       <div class="col-md-6">
+                                      <a href="#moblog"> <button type="button" class="btn btn-primary " value="web-Execute" id="web-Execute"> Execute</button> &nbsp;</a>
+                                       </div>
+                                       <div class="col-md-6">
+                                       <button type="button" class="btn btn-default show" value="web-Report" id="web-Report"> Report</button>
+                                       </div>
+                                    </div>
+                                 </form>
+                                 <div class="progress-console" id="moblog">
+                                    <div class="progress-log">
+                                       <p>Progress</p>
+                                    </div>
+                                    <div class="col-md-12 progress-text"> <span>28.07.2021 12:30:12</span> <span class="black">Execution started</span>
+										<br/> <span>28.07.2021 12:30:12</span> <span class="black"> Process 1 started on thread 1</span>
+										<br/> <span>28.07.2021 12:30:12</span> <span class="green">Process 1 completed on thread 1</span>
+										<br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 2 started on thread 1</span>
+										<br/> <span>28.07.2021 12:30:12</span> <span class="red">Process 2 failed on thread 1</span>
+										<br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 3 started on thread 1</span>
+										<br/> <span>28.07.2021 12:30:12</span> <span class="green">Process 3 completed on thread 1</span>
+										<br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 4 started on thread 1</span> 
+									 </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- API Automation start-->
+                           <div class="tab-pane fade" id="nav-api" role="tabpanel" aria-labelledby="api"> 
+                           
+                              <div class="row api-automation">
+                                 <table id="example" class="display api_auto_table" style="width:97%">
+                                    <thead>
+                                       <tr>
+                                          <th>Protocol(http/https) <img src="images/sort.png" alt=""></th>
+                                          <th>Server Name/IP <img src="images/sort.png" alt=""></th>
+                                          <th>Sub URL <img src="images/sort.png" alt=""></th>
+                                          <th>Port Number <img src="images/sort.png" alt=""></th>
+                                          <th>Method Type <img src="images/sort.png" alt=""></th>
+                                          <th>Req:Body <img src="images/sort.png" alt=""></th>
+                                          <th>Content Encoding <img src="images/sort.png" alt=""></th>
+                                          <th>Authentication <img src="images/sort.png" alt=""></th>
+                                          <th></th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <input type="text" class="form-control" placeholder="Type"> </td>
+                                          <td>
+                                             <input type="text" class="form-control" placeholder="Type" id="server_input" onclick="myfun(this.id)">
+                                          </td>
+                                          <td>
+                                             <input type="text" class="form-control" placeholder="Type"  id="url_input" onclick="url_function(this.id)">
+                                          </td>
+                                          <td>
+                                             <input type="text" class="form-control" placeholder="Type">
+                                          </td>
+                                          <td>
+                                             <select class=" project-method form-control" name="method" id="method">
+                                                <option value="GET">GET</option>
+                                                <option value="POST">POST</option>
+                                                <option value="PUT">PUT</option>
+                                                <option value="OPTIONS">OPTIONS</option>
+                                                <option value="DELETE">DELETE</option>
+                                             </select>
+                                          </td>
+                                          <td>
+                                             <input type="text" class="form-control" placeholder="Type" id="req_input" onclick="req_function(this.id)">
+                                          </td>
+                                          <td>
+                                             <input type="text" class="form-control" placeholder="Type">
+                                          </td>
+
+                                          <td class="api_check">
+                                             <div class="general_radio">
+                                             <input id="api-yes" type="radio" class="api-yes" value="radi" name="api-radio" onclick="mypopup(this.id)">
+                                             <label> Yes </label>
+                                             <input id="api-no" type="radio" class="" value="radi2" name="api-radio">
+                                             <label>No</label>
+                                              </div>
+                                             <!-- <div class="">
+                                                <main class="form-container">
+                                                   <div>
+                                                      <input id="api-yes" type="radio" class="api-select" value="radi" name="api-radio">
+                                                      <label for="api-yes"> Yes </label>
+                                                   </div>
+                                                </main>
+                                             </div>
+                                             <div class="">
+                                                <main class="form-container">
+                                                   <div class="api_radio_no">
+                                                      <input id="api-no" type="radio" class="api-git" value="radi2" name="api-radio">
+                                                      <label for="api-no">No</label>
+                                                   </div>
+                                                </main>
+                                             </div> -->
+                                          </td>
+                                          <td class="Add-trash"> <span> <img src="images/web-automation/plus-circle.svg" class="add"> </span> <!-- &nbsp; <span><img src="images/web-automation/trash-2.svg" class="delete"></span> --> </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+
+
+                                 <!-- The Modal -->
+                                 <div id="myModal" class="modal">
+                                    <div class="modal-content"> 
+                                    <p>Server Name   <span class=""> <img src="images/web-automation/x-circle.svg" id="input_x"></span></p>
+                                    <textarea type="text" value="type" id="updatevalue"></textarea>
+                                    <div class="row api-report">
+                                       <div class="col-md-6">
+                                          <button type="button" class="btn btn-primary right close_btn " value="api-save" id=""> Save</button>
+                                       </div>
+                                       <div class="col-md-6">
+                                          <button type="button" class="btn btn-default show" value="api-cancel" id=""> Cancel</button>
+                                       </div>
+                                    </div>
+
+                                    </div>
+                                 </div>
+                                 <div id="myModal1" class="modal">
+                                    <div class="modal-content"> 
+                                    <p>Sub URL   <span class=""> <img src="images/web-automation/x-circle.svg" id="input_x"></span></p>
+                                    <textarea type="text" value="type" id="updateurlvalue"></textarea>
+                                    <div class="row api-report">
+                                       <div class="col-md-6">
+                                          <button type="button" class="btn btn-primary right close_btn1 " value="api-save" id=""> Save</button>
+                                       </div>
+                                       <div class="col-md-6">
+                                          <button type="button" class="btn btn-default show" value="api-cancel" id=""> Cancel</button>
+                                       </div>
+                                    </div>
+
+                                    </div>
+                                 </div>
+                                 <div id="myModal2" class="modal">
+                                    <div class="modal-content"> 
+                                    <p>Req : Body   <span class=""> <img src="images/web-automation/x-circle.svg" id="input_x"></span></p>
+                                    <textarea type="text" value="type" id="updatereqvalue"></textarea>
+                                    <div class="row api-report">
+                                       <div class="col-md-6">
+                                          <button type="button" class="btn btn-primary right close_btn2 " value="api-save" id=""> Save</button>
+                                       </div>
+                                       <div class="col-md-6">
+                                          <button type="button" class="btn btn-default show" value="api-cancel" id=""> Cancel</button>
+                                       </div>
+                                    </div>
+
+                                    </div>
+                                 </div>
+                                 <div id="myModal3" class="modal">
+                                    <div class="modal-content"> 
+                                    <p>Add Header Key and value  <span class=""> <img src="images/web-automation/x-circle.svg" id="input_x"></span></p>
+                                 </br>
+                                    <div class="row model_yesbtn" id="content"> 
+                                       <div class="">
+                                       
+                                        <label>Key</label> <input type="text" id="" class="" value="">
+                                     
+                                          <label>Value</label> <input type="text" id="" class="" value=""> &nbsp;
+                                      <lable>
+                                       <span> <img src="images/web-automation/plus-circle.svg" onclick="addRow()"> </span>&nbsp; <span><img src="images/web-automation/trash-2.svg"></span>
+
+                                      </lable>
+                                       </div>
+                                   
+                                       </div>
+                                       <div class="row api-report">
+                                          <div class="col-md-6">
+                                             <button type="button" class="btn btn-primary right close_btn3"  value="api-save" id=""> Save</button>
+                                          </div>
+                                          <div class="col-md-6">
+                                             <button type="button" class="btn btn-default show" value="api-cancel" id=""> Cancel</button>
+                                          </div>
+                                    </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+                              <div class="row api-report">
+                                 <div class="col-md-6">
+                                    <a  href="#apilog">  <button type="button" class="btn btn-primary right " value="api-Execute" id="api-Execute"> Execute</button> </a>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <button type="button" class="btn btn-default show" value="api-Report" id="api-Report"> Report</button>
+                                 </div>
+                              </div>
+                              <div class="row" id="apilog">
+                                 <div class="col-md-4 chat-api">
+                                    <div class="progress-console">
+                                       <div class=" progress-log">
+                                          <p>Progress Status</p>
+                                       </div>
+                                       <div class="progress-text">
+                                          <canvas class="charts" id="analytic" style="width:100%;max-width:600px"></canvas>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-8">
+                                    <div class="progress-console">
+                                       <div class="progress-log">
+                                          <p>Scan Log</p>
+                                       </div>
+                                       <div class="col-md-12 progress-text"> <span>28.07.2021 12:30:12</span> <span class="black">Execution started</span>
+                                 <br/> <span>28.07.2021 12:30:12</span> <span class="black"> Process 1 started on thread 1</span>
+                                 <br/> <span>28.07.2021 12:30:12</span> <span class="green">Process 1 completed on thread 1</span>
+                                 <br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 2 started on thread 1</span>
+                                 <br/> <span>28.07.2021 12:30:12</span> <span class="red">Process 2 failed on thread 1</span>
+                                 <br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 3 started on thread 1</span>
+                                 <br/> <span>28.07.2021 12:30:12</span> <span class="green">Process 3 completed on thread 1</span>
+                                 <br/> <span>28.07.2021 12:30:12</span> <span class="black">Process 4 started on thread 1</span> 
+                               </div>
+                                 </div>
+                              </div>
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+      </div>
+	<!--main container endss-->
+	<!--    copy rights starts-->
+	<div class="copyright-container"> Copyright © 3i Infotech. All rights reserved. </div>
+	<!--    copy rights ends-->
+	<script src="js/jquery3.6.0.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/jquery.dataTables.min.js"></script>
+	<script src="js/Chart.js"></script>
+	<script>
+	$(".user-profile-main").click(function() {
+		$(".user-profile-details").addClass("show-div");
+		event.stopPropagation();
+	});
+	$(".close-click").click(function() {
+		$(".user-profile-details").removeClass("show-div");
+		event.stopPropagation();
+	});
+	$('body').click(function() {
+		$('.user-profile-details').removeClass("show-div");
+	});
+	</script>
+	<script>
+	$(".nav-item").click(function() {
+		document.getElementById("page").innerHTML = this.id;
+      console.log(this.id);
+      if(this.id == "visual" || this.id == "api"){
+         $(".download img").css("display", "none");
+      }else{
+         $(".download img").css("display", "block");
+      }
+	});
+	$(document).ready(function() {
+		$(".chectout-select").click(function() {
+			$(".Checkout_git").css("display", "none");
+			$(".Checkout_str").css("display", "block");
+			$(".progress-console").css("display", "none");
+		});
+		$(".chectout-git").click(function() {
+			$(".Checkout_str").css("display", "none");
+			$(".Checkout_git").css("display", "block");
+			$(".progress-console").css("display", "none");
+		});
+		$("#checkout,#checkout-git").click(function() {
+			$(".ckeck-box").fadeIn(500);
+			// $(".ckeck-box").fadeOut(3000);
+		});  
+      $(".checkout_close").click(function() {
+		$(".ckeck-box").fadeOut(500);
+		}); 
+
+		$("#xlsheet").click(function() {
+			$(".choose-option").css("display", "block");
+			$("#xlsheet_btn").css("display","flex");
+			$(".progress-console").css("display", "none");
+		});
+
+		$("#xlsheet2").click(function() {
+			$("#xlsheet_btn").css("display","flex");
+         $(".choose-option").css("display", "none");
+			$(".progress-console").css("display", "none");
+		});
+		//progress-console
+		$("#Execute").click(function() {
+			$(".progress-console").css("display", "block");
+		});
+		$("#git-importsheet").click(function() {
+			$(".progress-console").css("display", "block");
+		});
+    
+	});
+	</script>
+	<script>
+	var $fileInput = $('.file-input');
+	var $droparea = $('.file-drop-area');
+	// highlight drag area
+	$fileInput.on('dragenter focus click', function() {
+		$droparea.addClass('is-active');
+	});
+	// back to normal state
+	$fileInput.on('dragleave blur drop', function() {
+		$droparea.removeClass('is-active');
+	});
+	// change inner text
+	$fileInput.on('change', function() {
+		var filesCount = $(this)[0].files.length;
+		var $textContainer = $(this).prev();
+		if(filesCount === 1) {
+			// if single file is selected, show file name
+			var fileName = $(this).val().split('\\').pop();
+			$textContainer.text(fileName);
+		} else {
+			// otherwise show number of files
+			$textContainer.text(filesCount + ' files selected');
+		}
+	});
+	// Table script
+	$(document).ready(function() {
+		$('#example').DataTable();
+    //  $('#example1').DataTable();
+	});
+	// upload project
+	$(".upload").click(function() {
+		$(".project-form").css("display", "block");
+	});
+	$("#upload-form-hide").click(function() {
+		$(".project-form").css("display", "none");
+	});
+	</script>
+	<script>
+	$(document).ready(function() {
+
+		$("#web,#visual,#mobile,#api").click(function() {
+			$(".progress-console").css("display", "none");
+		});
+		$("#move2").click(function() {
+			$(this).css("background", "#F58027");
+			$("#btn-value").html("Create Reference");
+			$(".progress-console").css("display", "none");
+			$("#move3").click(function() {
+				$(this).css("background", "#F58027");
+				$("#btn-value").html("Test");
+            $("#Test_report").css("display", "block");
+				$(".progress-console").css("display", "none");
+				$("#move4").click(function() {
+					$(this).css("background", "#F58027");
+					$("#btn-value").html("Approve");
+               $("#Test_report").css("display", "none");
+					$("#Decline").css("display", "block");
+					$(".progress-console").css("display", "none");
+					// Accepting Instal
+					$("#btn-value").click(function() {
+						$(".install-box").fadeIn(500);
+					//	$(".install-box").fadeOut(3000);
+					});
+					// Decine
+					$("#Decline").click(function() {
+						$(".declain-box").fadeIn(500);
+					//	$(".declain-box").fadeOut(3000);
+					});
+               $(".approve_alert_close,.decline_alert_close").click(function() {
+						$(".install-box").fadeOut(500);
+					});
+               $(".decline_alert_close").click(function() {
+						$(".declain-box").fadeOut(500);
+					});
+				});
+			});
+		});
+		
+		$("#btn-value").click(function() {
+		var btnvalue = $("#btn-value").html();
+		if(btnvalue != "Approve"){
+			$(".progress-console").css("display", "block");
+		}	
+		});
+		
+		
+	});
+	</script>
+	<script>
+	$(document).ready(function() {
+		$("#web-Execute").click(function() {
+			$(".progress-console").css("display", "block");
+		});
+	});
+	// API Progress
+	$("#api-Execute").click(function() {
+		$(".progress-console").css("display", "block");
+	});
+	const data = {
+		labels: ['High', 'Medium', 'Low'],
+		datasets: [{
+			label: 'My First Dataset',
+			data: [300, 150, 40],
+			backgroundColor: ['#6698FF', '#F58027', '#2B8B37'],
+			hoverOffset: 4
+		}]
+	};
+	// Analytic Chart Config
+	let analyticChart = document.getElementById("analytic");
+	const doughnutChart = new Chart(analyticChart, {
+		type: 'doughnut',
+		data: data,
+	});
+	</script>
+	<script>
+      repo_Function()
+      
+     function repo_Function() {
+     
+      $.ajax({
+     
+       type: "GET",
+      url: "https://api.github.com/orgs/vamsiui/repos",
+       success: function(data) {
+          console.log(data);
+     
+        for (var i = 0; i < data.length; i++) {
+         var select = document.getElementById("web-repo");
+         var option = document.createElement("option");
+         option.text = data[i].name;
+         option.value = data[i].id;
+         select.add(option);
+                }		
+       },
+       error: function(data, textStatus, jqXHR) {
+        console.log(data);
+       }
+      });
+     };
+     
+      var fetch_web_repo = document.getElementById("web-repo");
+      var fetch_web_project = document.getElementById("head_project");
+     function show(){
+     var strUser1 = fetch_web_repo.value;
+     console.log("Repo id is : " + strUser1)
+     console.log("project id is : " + fetch_web_project.value);
+     // var strUser2 = e.options[e.selectedIndex].text;
+       //  console.log(strUser2)
+     }
+     fetch_web_repo.onchange=show;
+     fetch_web_project.onchange=show;
+    show(); 
+
+  // project list   
+     project_Function();
+     function project_Function() {
+      $.ajax({
+       type: "GET",
+      url: "https://api.github.com/orgs/vamsiui/projects",
+          headers:{
+              Accept: "application/vnd.github.inertia-preview+json",
+          },
+       success: function(data) {
+           console.log(data);
+     for (var i = 0; i < data.length; i++) {
+         var select = document.getElementById("head_project");
+         var option = document.createElement("option");
+         option.text = data[i].name;
+         option.value = data[i].id;
+         select.add(option);
+                }	
+       },
+       error: function(data, textStatus, jqXHR) {
+        console.log(data);
+       }
+      });
+     };
+     </script>
+
+<script>
+   function myfun(clicked_serverinput){
+   // Get the modal to enter input
+   console.log(clicked_serverinput)
+   var modal = document.getElementById("myModal");
+   var btn = document.getElementById(clicked_serverinput);
+   var span = document.getElementsByClassName("close_btn")[0];
+   
+   // When the user clicks the button, open the modal 
+ //  btn.onclick = function() {
+     modal.style.display = "block";
+  //  } 
+   // When the user clicks on <span> (x), close the modal
+   span.onclick = function() {
+     var upvalue = document.getElementById("updatevalue").value;
+     modal.style.display = "none";
+     document.getElementById(clicked_serverinput).value = upvalue;
+   }
+   // outside of the modal, close it
+   window.onclick = function(event) {
+     if (event.target == modal) {
+       modal.style.display = "none";
+     }
+   }
+
+}
+</script>
+<script>
+  function url_function(clicked_urlinput){
+     console.log(clicked_urlinput);
+     var urlmodal = document.getElementById("myModal1");
+   var urlbtn = document.getElementById(clicked_urlinput);
+   var urlspan = document.getElementsByClassName("close_btn1")[0];
+
+      urlmodal.style.display = "block";
+   // When the user clicks on <span> (x), close the modal
+      urlspan.onclick = function() {
+   var upvalue = document.getElementById("updateurlvalue").value;
+   urlmodal.style.display = "none";
+     document.getElementById(clicked_urlinput).value = upvalue;
+   } 
+   // outside of the modal, close it
+   window.onclick = function(event) {
+     if (event.target == modal) {
+      urlmodal.style.display = "none";
+     }
+   }
+  }
+  function req_function(clicked_reqinput){
+     var reqmodal = document.getElementById("myModal2");
+   var reqbtn = document.getElementById(clicked_reqinput);
+   var reqspan = document.getElementsByClassName("close_btn2")[0];
+   
+      reqmodal.style.display = "block";
+
+      reqspan.onclick = function() {
+   var reqvalue = document.getElementById("updatereqvalue").value;
+   reqmodal.style.display = "none";
+     document.getElementById(clicked_reqinput).value = reqvalue;
+   } 
+   window.onclick = function(event) {
+     if (event.target == modal) {
+      reqmodal.style.display = "none";
+     }
+   }
+  }
+
+
+
+   // api-yes
+ 
+       //   Get the modal to Body enter input
+       var yesmodal = document.getElementById("myModal3");
+   var yesbtn = document.getElementById("api-yes");
+   var yesspan = document.getElementsByClassName("close_btn3")[0];
+   
+   yesbtn.onclick = function() {
+      yesmodal.style.display = "block";
+   } 
+      yesspan.onclick = function() {
+   yesmodal.style.display = "none";
+   
+   } 
+   window.onclick = function(event) {
+     if (event.target == modal) {
+      yesmodal.style.display = "none";
+     }
+   }
+  
+
+   // add and delete
+   var i = 0;
+   var j = 0;
+    function mypopup(clicked_server_input) {
+       console.log(clicked_server_input)
+       yesmodal.style.display = "block";
+
+      }
+        $(document).on("click", ".delete", function(){
+           j=j-1;
+        
+        // confirm("Are you sure do you want to delete this record ?");
+              
+               var r = confirm("Are you sure do you want to delete this record ?");
+               if (r == true) {
+                  $(this).parents("tr").remove();
+               } 
+               if(j == 0){
+                  $(".add").css("visibility", "visible");
+               }
+
+    });
+ 
+    $(document).on("click", ".add", function(){
+    i = i+1;
+    j = j+1;
+       console.log(i);
+    $(this).parents("tr").add();
+   //   $(this).removeClass('add').addClass('new_class');
+   $(".add").css("visibility", "hidden");
+
+     $(".api_auto_table").find('tbody').append("<tr class='added_row'><td><input type='text' class='form-control' placeholder='type'></td><td><input type='text' class='form-control' placeholder='type' id='server_input"+i+"' onclick='myfun(this.id)'></td><td><input type='text' class='form-control' placeholder='type'  id='url_input"+i+"' onclick='url_function(this.id)'></td><td><input type='text' class='form-control' placeholder='type'></td><td><select class='project-method form-control' name='method'> <option>GET</option><option>POST</option><option>PUT</option><option>DELETE</option></select></td><td><input type='text' class='form-control' placeholder='type' id='req_input"+i+"' onclick='req_function(this.id)'></td><td><input type='text' class='form-control' placeholder='type'></td><td class='api_check'><div class='general_radio'><input id='api-yes"+i+"' type='radio' value='radi' name='api-radio"+i+"' onclick='mypopup(this.id)'><label>Yes </label><input id='api-no' type='radio' value='radi2' name='api-radio"+i+"'><label>No </label> </div> </td> <td class='Add-trash'> <span> <img src='images/web-automation/plus-circle.svg' class='add'> </span>&nbsp; <span><img src='images/web-automation/trash-2.svg' class='delete'></span> </td></tr>");
+     });
+
+     var rowCount = $('#perform-iso tr').length;
+  console.log(rowCount);
+// Model box div add and delete
+     function addRow() {
+  const div = document.createElement('div');
+
+  div.className = '';
+
+  div.innerHTML = `
+ </br>
+                                       
+   <label>Key</label> <input type="text" id="" class="" value="">
+
+   <label>Value</label> <input type="text" id="" class="" value=""> &nbsp;
+<lable>
+<span> <img src="images/web-automation/plus-circle.svg" onclick="addRow()"> </span> &nbsp;
+
+</lable>
+
+<img src="images/web-automation/trash-2.svg" onclick="removeRow(this)" />
+
+  `;
+
+  document.getElementById('content').appendChild(div);
+}
+
+function removeRow(input) {
+ //  alert("Are you sure do you want to delete this record ?");
+   var r = confirm("Are you sure do you want to delete this record ?");
+               if (r == true) {
+                  document.getElementById('content').removeChild(input.parentNode);
+               } 
+  
+}
+
+
+
+   </script>
+   <script type="text/javascript">
+      // search file choose
+      function performClick(elemId) {
+         var elem = document.getElementById(elemId);
+         if(elem && document.createEvent) {
+            var evt = document.createEvent("MouseEvents");
+            evt.initEvent("click", true, false);
+            elem.dispatchEvent(evt);
+         }
+      }
+      </script>
+
+</body>
+
+</html>

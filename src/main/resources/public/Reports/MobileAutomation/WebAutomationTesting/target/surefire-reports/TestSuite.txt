@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 3.219 s <<< FAILURE! - in TestSuite
+com.tests.ENGRCMobilewithArgs.EnGRC[Iphone 12 Pro Mini Simulator, 14.5, ios, Safari, oauth-infotechdemoacc21-ec740, 2ea8e774-070a-4790-8243-40667799793c, Testing, build2](0)  Time elapsed: 2.989 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Unable to parse remote response: Invalid device name specified: Iphone 12 Pro Mini Simulator
+Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:25:02.294Z'
+System info: host: 'FLEXIB', ip: '10.43.9.176', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '11.0.10'
+Driver info: driver.version: RemoteWebDriver
+	at com.tests.ENGRCMobilewithArgs.EnGRC(ENGRCMobilewithArgs.java:77)
+

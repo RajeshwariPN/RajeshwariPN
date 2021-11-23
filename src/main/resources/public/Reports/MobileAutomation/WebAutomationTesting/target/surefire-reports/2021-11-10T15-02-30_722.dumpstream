@@ -1,0 +1,4 @@
+# Created at 2021-11-10T15:02:33.069
+Boot Manifest-JAR contains absolute paths in classpath 'F:\STS_Workspace_Flexib2.0\flexibautomation\src\main\resources\public\Reports\MobileAutomation\WebAutomationTesting\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+
